@@ -34,7 +34,6 @@ Author: Davor Bojkić - Bole @ DAJ MI 5
         www.dajmi5.com
 
 Contributions:
-test    
 
 Description:
 - Prijava objekta na poreznu upravi
