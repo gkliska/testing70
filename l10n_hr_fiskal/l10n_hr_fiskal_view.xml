@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_form">
+			<field name="name">l10n_hr_fis_pprostor_form</field>
+			<field name="model">l10n_hr_fis_pprostor</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Fiskalizacija" version="7.0">
+					<sheet>
+						<separator string="PRIJAVA POSLOVNOG PROSTORA U POREZNU UPRAVU" />
+
+						<group>
+							<field name="name" readonly="False" />
+							<field name="oznaka_pp" placeholder="PJ1 ili u skladu sa poslovanjem" />
+						</group>
+						<separator string="ADRESA" />
+						<group colspan="4" col="4">
+							<field name="ulica" />
+							<field name="kbr" />
+							<field name="kbr_dodatak" />
+							<field name="posta" />
+							<field name="naselje" />
+						</group>
+						<group colspan="3">
+							<field name="radno_vrijeme" placeholder="npr: pon-pet 07:00-18:00 ili pon-pet 08:00-20:00, sub 08:14:00" />
+							<field name="spec" placeholder="Bez predznaka HR, npr : 35052749252" />
+						</group>
+						<group colspan="2">
+							<button name="Fiskalizacija_echo" string="Test veze ECHO metodom"
+								type="object" class="oe_highlight" />
+						</group>
+					</sheet>
+
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_tree">
+			<field name="name">l10n_hr_fis_pprostor_tree</field>
+			<field name="model">l10n_hr_fis_pprostor</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Fiskalizacija">
+					<field name="name" />
+					<field name="oznaka_pp" />
+					<field name="ulica" />
+					<field name="kbr" />
+					<field name="kbr_dodatak" />
+					<field name="posta" />
+					<field name="naselje" />
+				</tree>
+
+			</field>
+		</record>
+
+		<!--############################ ## ## ACTIONS ADD ## ############################## -->
+		<record model="ir.actions.act_window" id="l10n_hr_fis_pprostor_action1">
+			<field name="name">l10n_hr_fis_pprostor_form</field>
+			<field name="res_model">l10n_hr_fis_pprostor</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form,tree</field>
+
+		</record>
+
+		<!-- record model="ir.actions.act_window" id="fiskalizacija_echo"> <field 
+			name="name">fiskalizacija_echo</field> <field name="type">ir.actions.act_window</field> 
+			<field name="res_model">objectname</field> <field name="domain">[('field_name','condition',criteria)]</field>> 
+			<field name="view_type">form</field> <field name="view_mode">tree,form</field> 
+			<field name="view_id" ref="object_name_tree_view"/> </record > 
+			################################### 
+			## 
+			## MENU ITEMS add 
+			## 
+			#################################### -->
+
+		<menuitem id="menu_fiskal_1" name="Fiskalizacija" parent="base.menu_administration"
+			sequence="1" />
+		<menuitem id="menu_fiskal_2" name="Prijava Objekata"
+			action="l10n_hr_fis_pprostor_action1" parent="menu_fiskal_1" />
+	</data>
+</openerp>
+

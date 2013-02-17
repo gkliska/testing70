@@ -1,0 +1,8 @@
+sudo apt-get install python-dev python-m2crypto libxmlsec1-dev
+
+- otpakiraj tar, odi u folder,
+pyton setup.py build
+-> OpenSSL !
+
+sudo python setup.py install 
+
