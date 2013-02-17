@@ -46,7 +46,7 @@ TODO
 
 
 """,
-    "version" : "1.00",
+    "version" : "1.01",
     "author" : "DAJ MI 5",
     "category" : "Localisation/Croatia",
     "website": "http://www.dajmi5.com",
