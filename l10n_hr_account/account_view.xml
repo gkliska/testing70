@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data>
+	<record id="view_account_journal_invoice_pnbr" model="ir.ui.view">
+		<field name="name">view.account.journal.invoice.pnbr</field>
+		<field name="model">account.journal</field>
+		<field name="type">form</field>
+		<field name="inherit_id" ref="account.view_account_journal_form"/>
+		<field name="arch" type="xml">
+			<notebook position="inside">
+				<page string="Invoice">
+					<group colspan="6" col="8"> 
+                    	<separator string="Poziv na broj" colspan="8"/>
+						<field name="model_pnbr" colspan="4" groups="account.group_account_manager"/>
+	            		<newline/>
+						<field name="P1_pnbr" groups="account.group_account_manager"/>
+						<field name="P2_pnbr" groups="account.group_account_manager"/>
+						<field name="P3_pnbr" groups="account.group_account_manager"/>
+						<field name="P4_pnbr" groups="account.group_account_manager"/>
+                    	<separator string="Fiskalizacija" colspan="8"/>
+						<field name="nacin_placanja" groups="account.group_account_manager"/>
+					</group>	
+				</page>
+			</notebook>
+		</field>
+	</record>	
+ </data>
+</openerp>
