@@ -1,0 +1,1870 @@
+DEBUG:suds.transport.http:opening (file:///./wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file://./wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/Radna površina/fiskalizacija openerp/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaService)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.plugin:list index out of range
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/suds/plugin.py", line 254, in __call__
+    method(ctx)
+  File "./fiskal.py", line 29, in sending
+    racunzahtjev = doc2.xpathEval('//*[local-name()="%s"]' % msgtype)[0]
+IndexError: list index out of range
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaService
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.client:<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:http failed:
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><env:Fault><faultcode>env:Client</faultcode><faultstring>Rejected (from client)</faultstring></env:Fault></env:Body></env:Envelope>
+DEBUG:suds.transport.http:opening (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaService)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.plugin:list index out of range
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/suds/plugin.py", line 254, in __call__
+    method(ctx)
+  File "./fiskal.py", line 29, in sending
+    racunzahtjev = doc2.xpathEval('//*[local-name()="%s"]' % msgtype)[0]
+IndexError: list index out of range
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaService
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.client:<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:http failed:
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><env:Fault><faultcode>env:Client</faultcode><faultstring>Rejected (from client)</faultstring></env:Fault></env:Body></env:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaService)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>ab205ccd-b430-4576-9bf8-c7e932802600</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:49:12</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:49:12</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>f07a14d768f1ce8fb12241521770fd41</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaService
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>ab205ccd-b430-4576-9bf8-c7e932802600</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:49:12</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:49:12</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>f07a14d768f1ce8fb12241521770fd41</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>62TXODJmWactlCYQT50U5Wup/aY=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>VXOprlD+GJNLxb+StVYGt9IVX6/hlT6QfAZD/drbUst3p/V8Y9D7RVHcqX9jMfvo
+IMuMLSJSDxsfvKl0kJUMotp1VfbLKL/Hx/SX7Vy3mnf115a5t7na3omHI05bzz0N
+K4GVJMoJf0XpHUMhY5+uuFtjtNuSV75cFLgTyD1SdIQLrfZ5JdCYiWcJHneSU4OZ
+IVeSbQ8J8F5G1xT7sVzzhTXpVmLpS3Skq0z054Gk8kG0jnn+5M0t+ee1xqUpqlXv
+3XXHehFroHY+UoNzpWzvr3elpznPiQsE6SUuhExhtTpL5guQ/jxn75QGaGzNFHs7
+3+LxHBVuKmy4nOKqT5x3kQ==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+ERROR:suds.client:<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>ab205ccd-b430-4576-9bf8-c7e932802600</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:49:12</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:49:12</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>f07a14d768f1ce8fb12241521770fd41</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:http failed:
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><env:Fault><faultcode>env:Client</faultcode><faultstring>Rejected (from client)</faultstring></env:Fault></env:Body></env:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>7686d1dc-654f-4860-a558-3aaf075cc7e0</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:50:47</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:50:47</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>ad7e9d89646294e02140612ecb813c20</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>7686d1dc-654f-4860-a558-3aaf075cc7e0</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:50:47</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:50:47</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>ad7e9d89646294e02140612ecb813c20</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>Qd5/m2gdbpIex80SSPcS+ZyuHlM=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>ZneapKUjHZ4e08BG8coo2N0ck6eMXswrpGJLZysO3oitqnzRSHozQ7unniR18cy5
+YI0Gcmw60qHQk1A5Af5rnJAAQyrOPm9G8OCXfuslnnFpIGaQIzSJlbxk0KMN5I+h
+w6yoxrp/nWsEIm5jCq9nhtevss98bkqWVZrGADJgfu1efXZ5iPZz2USThV/6wRt5
+6Kqh9CBTYBRgQpBMmwYTC6icqmrEGnLw45V4GiDp6PkKzOdLUKPy6IJOGp5TvHzW
+lHNnVNM8dlsSsjbvCHEFtCMGlmF0wj0mYNa9iyIuk+Aso5LeXYXcJAc2bvoZif4G
+h0As3erBV5ilVsfKLi9SqQ==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd1fe3080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>7686d1dc-654f-4860-a558-3aaf075cc7e0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:50:47</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>81a7082f-e40d-4a46-bf47-da917e32b983</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd1fe3080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>sqxQx74u+OvwtLfXY8FsE27X57Y=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>gF4N2Uki27kW8isqBwrh88V8GSO9qDHziP2i2LkE8fEBnTxe4IKE0qHkVOiiiNG/WSF3ouUIjLoDHPHkyYYXPGiONfRPLgcYW5rmLEHlVDm473f62Fs8KNixeYuU7hav4bsk3a8aX3fjOQS/l/rGdTZszTZbv6CTQ0b7OQjH/K/t06dg4HxnkcbAsjM+3X3QxRorzzjf4SMVcnxhzNopOUJO4saK/mOtC4pKk5kzVpmi4qvvDyqZ4PauCUk7+yLbo0np/g+B5SpWGKRCyoadq+8/CGYOofJWyJ0EDTdx6Qrf8RmZrp9mLHxDe1C/CcpwHLI/aEsaQAZdokX3L2Ow8g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd1fe3080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>7686d1dc-654f-4860-a558-3aaf075cc7e0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:50:47</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>81a7082f-e40d-4a46-bf47-da917e32b983</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd1fe3080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>sqxQx74u+OvwtLfXY8FsE27X57Y=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>gF4N2Uki27kW8isqBwrh88V8GSO9qDHziP2i2LkE8fEBnTxe4IKE0qHkVOiiiNG/WSF3ouUIjLoDHPHkyYYXPGiONfRPLgcYW5rmLEHlVDm473f62Fs8KNixeYuU7hav4bsk3a8aX3fjOQS/l/rGdTZszTZbv6CTQ0b7OQjH/K/t06dg4HxnkcbAsjM+3X3QxRorzzjf4SMVcnxhzNopOUJO4saK/mOtC4pKk5kzVpmi4qvvDyqZ4PauCUk7+yLbo0np/g+B5SpWGKRCyoadq+8/CGYOofJWyJ0EDTdx6Qrf8RmZrp9mLHxDe1C/CcpwHLI/aEsaQAZdokX3L2Ow8g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>c5226bd6-7e8e-49f6-a0ff-3dcfa85750c4</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:52:11</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:52:11</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>0fba0b1cf75bc98be6e1b0bfe25df909</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>c5226bd6-7e8e-49f6-a0ff-3dcfa85750c4</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:52:11</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:52:11</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>0fba0b1cf75bc98be6e1b0bfe25df909</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>ZU9rYuU2xDAcXlmaw0TAohrUbZ0=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>KvPOF3dLAKMN4resFhjK9SN7Csgt3bnTP4Xa1TFEqcyL6ssVHI1kLKAfcz1FgXu3
+reHBnZwgH5kwfWcFlcNX2KzEudmWJj6zmFwm9T62ty04MF4dswZegBThENrXsuxt
+WOdOGx/f7xv8x6eO/9N9OROaDABRlhcIO/dmez+RM46eJfqxpLhTmBRBX47MSzXC
+V2ZxLJcJwIwShFimYXcLQV4AwpzjpHCRGX6MAAhfu0i5To1YWZPtpurysM8MRPOp
+Y+TgUZ82DKykHx78wP+4gIOx5wgpHM+sgPTLWHcC+P2GQrmN1UMRMk6NXJC/qmVW
+kQdFG2ZsZ7YA3RYPuuKmqA==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd1fa9080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>c5226bd6-7e8e-49f6-a0ff-3dcfa85750c4</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:52:11</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>7d55c85a-177e-4160-9dd3-61ff8599e41d</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd1fa9080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>C3yM7BU+I/gRlJWHR5jbstUt8Wk=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>kFQWm7qnTiTeZd2MXLlyRaCW27gxbyhvMjbjRxt07xzg+ilVMl2uNSX6N2KLg6Ex1FvknjWbKExD6ssCWl/ChZ6nZYFa0beogn7xLarsZAp/L9MhbpYNUsgORZ3n5x3tXShumn6hpFS2TA2Y9zNx9b1E6kxciSHeSOmjZFdaE5ihVmnRX7CjRaZ1YMyvMORZLWGYB++OFYquIcp3i4BPgZWALMZXxZs+lQj/Z5VWJBOS+gFkepTJgFlX+jdCc6Cn65dZqMbfrsMYqeOIiZcqiCcC5hk1NyXVFXdXmCisWGtcDBpVEN9wUvVtgaXN0cUrExTOiWrpVKtvCw5sgewloQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd1fa9080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>c5226bd6-7e8e-49f6-a0ff-3dcfa85750c4</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:52:11</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>7d55c85a-177e-4160-9dd3-61ff8599e41d</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd1fa9080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>C3yM7BU+I/gRlJWHR5jbstUt8Wk=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>kFQWm7qnTiTeZd2MXLlyRaCW27gxbyhvMjbjRxt07xzg+ilVMl2uNSX6N2KLg6Ex1FvknjWbKExD6ssCWl/ChZ6nZYFa0beogn7xLarsZAp/L9MhbpYNUsgORZ3n5x3tXShumn6hpFS2TA2Y9zNx9b1E6kxciSHeSOmjZFdaE5ihVmnRX7CjRaZ1YMyvMORZLWGYB++OFYquIcp3i4BPgZWALMZXxZs+lQj/Z5VWJBOS+gFkepTJgFlX+jdCc6Cn65dZqMbfrsMYqeOIiZcqiCcC5hk1NyXVFXdXmCisWGtcDBpVEN9wUvVtgaXN0cUrExTOiWrpVKtvCw5sgewloQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>1dd1bfac-6072-4bc8-95a5-55afb83ed59f</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:53:45</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:53:45</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>f6b42068c8e96d7e0299c8d3d49bf2be</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>1dd1bfac-6072-4bc8-95a5-55afb83ed59f</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:53:45</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:53:45</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>f6b42068c8e96d7e0299c8d3d49bf2be</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>diJWbxF1KolNj6M1+PtVTFo1cbM=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>goXiH523oUvHJqaJrccpgzwR6r9tfBHQ7UWvs7wGL9GvZhQS4YCUieEoHgP+7yaU
+Wkv5osR5vr907Y3EBUETTGrPUVmIk8mp5PndtwHkQvK/EUxTXYiGKyxNLH+Jabrs
+zDA0KUwQM4ZgnWhDgLX9290dOhyVEyVf5dgIjEdYZJpPud2+ngNNwsOmdXr8ayfK
+2bLudxxsTWxnaurHVJat7cXPkaFKTUms1bkIs4Pc5zy7IKuEfFsBdCzJGVYEJhqY
+yhFi6JGQewt+0WMa4vwyjOFsbD8qb8Z2OmKicxtLf/sveVymDXyKN/R0We0UEw8L
+VpQyTIFMnibG0ueDhc25uw==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc81a8080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>1dd1bfac-6072-4bc8-95a5-55afb83ed59f</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:53:46</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>ff9a2206-3ff0-4d14-bb06-1f069f8bf661</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc81a8080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>s70NZJthbZAc7Yd0MdsE4sNUyOA=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>lxje/j6XUwFjFAHOtA8AQExtBQq2T92sPsSBtbFLPHmGrrjGuJsepWg2gzrb52snxglEIWzJzdFTGZYqZ/9bjfP+LUm1pXxTOLAQMI/ze1j744out3PV+VXzmk3uo73loj6foA9VpfM48d8WvS5hti34ydaa6GWwCPj13BBeVGu90iAh3DCkTPpc0JAb9QO/Ro1H1kt77Ms1pzu++VDOzN97gpwdlHDPkrF5EWrBHffaq5folE0auLfWhml6RW3uSmwhXGL+BnMC0msKeWHNdEKSjvM0wRKbJ8JNa2PZIwZCk7Bv540PvaQUWW30rUtCwrnGN5APwBjvrHxgoyk5bw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc81a8080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>1dd1bfac-6072-4bc8-95a5-55afb83ed59f</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:53:46</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>ff9a2206-3ff0-4d14-bb06-1f069f8bf661</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc81a8080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>s70NZJthbZAc7Yd0MdsE4sNUyOA=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>lxje/j6XUwFjFAHOtA8AQExtBQq2T92sPsSBtbFLPHmGrrjGuJsepWg2gzrb52snxglEIWzJzdFTGZYqZ/9bjfP+LUm1pXxTOLAQMI/ze1j744out3PV+VXzmk3uo73loj6foA9VpfM48d8WvS5hti34ydaa6GWwCPj13BBeVGu90iAh3DCkTPpc0JAb9QO/Ro1H1kt77Ms1pzu++VDOzN97gpwdlHDPkrF5EWrBHffaq5folE0auLfWhml6RW3uSmwhXGL+BnMC0msKeWHNdEKSjvM0wRKbJ8JNa2PZIwZCk7Bv540PvaQUWW30rUtCwrnGN5APwBjvrHxgoyk5bw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:54:33</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:54:33</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>16444412bcf1dd473580055fa7370caf</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:54:33</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:54:33</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>16444412bcf1dd473580055fa7370caf</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>Qij9ftfpE1zklSKLPneQy6FLjT4=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>QyAWSWekhdLC1WiYNOGSCmVoshcY+9U19hSgp9+pvCpV47GjMP3XKGeyyfNEV2gG
+PxrPm/pRr4TGWOsoCTWOMHtW7PbK6atCNzGnHpdVb3frnpO4ZF0IpXoJtODM3z0q
+PwIk7VgwoHVQ+CrnNP0ZJo2HJwDXz5KNzWCWtR/080r/N9GJab6mTJNI7nyg/MjJ
+l55Aogr2JPa3Lw6e3H7uCe+RRFuPbbxZHZ0VVB6VSH0JOvzFxCwD1unU5hP5bXNJ
+p45lewqLpNiuHKMYAazuJa9WhPrX9098FXpNwP193PpXIgKC8HB9ZP0c+8HtQUqh
+gr7RT0gT1H+s+r3Hp1sz/A==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd4c0e080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:54:33</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>e9a5aecb-4a8e-432a-a934-70833058e425</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd4c0e080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>ZUEhgFzTYKXGBp70szBCy2AUU4M=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>ozETj6Ul48dBi1wxfeRqe38IKMC6wL7EycCQINxva0rRfEfEw1SbrMO3lyHUVhmoB3C/u/+UzSUPfdncwsHjtaAA4iHqlWjmePhQNVX8eXz4vsYshgAZrt98zAh2qfvOgK05x5ewRmA22TLSrens9PrTEsUT0jVjiFraivESUP9LFEeMZnKNLYObdBJ3tQ3HtEU5TSy5zPITrGDo9KOtuo2IjzzyQGgsKCzkhVcpoAUSDe1ApWaD05tqbM5LDelI8qCK73yTR11D9J2KlEpDcgrSk4/fSgkxUQPznbYquIKRmH8If7h0uh5j3z0X6mTeOyRPapqqDCNhxIP6ynvzjg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd4c0e080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T15:54:33</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>e9a5aecb-4a8e-432a-a934-70833058e425</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd4c0e080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>ZUEhgFzTYKXGBp70szBCy2AUU4M=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>ozETj6Ul48dBi1wxfeRqe38IKMC6wL7EycCQINxva0rRfEfEw1SbrMO3lyHUVhmoB3C/u/+UzSUPfdncwsHjtaAA4iHqlWjmePhQNVX8eXz4vsYshgAZrt98zAh2qfvOgK05x5ewRmA22TLSrens9PrTEsUT0jVjiFraivESUP9LFEeMZnKNLYObdBJ3tQ3HtEU5TSy5zPITrGDo9KOtuo2IjzzyQGgsKCzkhVcpoAUSDe1ApWaD05tqbM5LDelI8qCK73yTR11D9J2KlEpDcgrSk4/fSgkxUQPznbYquIKRmH8If7h0uh5j3z0X6mTeOyRPapqqDCNhxIP6ynvzjg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T15:54:33</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T15:54:33</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>16444412bcf1dd473580055fa7370caf</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T15:54:33</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T15:54:33</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>16444412bcf1dd473580055fa7370caf</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>Qij9ftfpE1zklSKLPneQy6FLjT4=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>QyAWSWekhdLC1WiYNOGSCmVoshcY+9U19hSgp9+pvCpV47GjMP3XKGeyyfNEV2gG
+PxrPm/pRr4TGWOsoCTWOMHtW7PbK6atCNzGnHpdVb3frnpO4ZF0IpXoJtODM3z0q
+PwIk7VgwoHVQ+CrnNP0ZJo2HJwDXz5KNzWCWtR/080r/N9GJab6mTJNI7nyg/MjJ
+l55Aogr2JPa3Lw6e3H7uCe+RRFuPbbxZHZ0VVB6VSH0JOvzFxCwD1unU5hP5bXNJ
+p45lewqLpNiuHKMYAazuJa9WhPrX9098FXpNwP193PpXIgKC8HB9ZP0c+8HtQUqh
+gr7RT0gT1H+s+r3Hp1sz/A==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc6731080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:02:23</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>d149a7c1-2815-4cea-bd3c-b8683980cdcc</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc6731080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>GhWMLOt7o2VuJTlishyii+7irtU=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>L5GAAKqhx3I+tiJAjmN1iuXnb+8jMmus+NcuzwetJETp426by0BuTPwjC8xbeMbHykcxlfcXQySlYxfxuK0X1rnv0iwckdoS/YxOklZMtfyzlzl+3ifzx3/8LKr1p7hjy/NJ7fm7vDdkbMY2xbHCcVoW7c6kTtqquk21NUocn4VCbm5YlUpNKE4rZ7SkcUnJ5tcybTg19ijUQNFo7kuSPiM2/hn1GTOGLF2oWimIKYNhLcvz7csNLDSK5B5leBp0050b53Mi69oOru759L3fI4KpsQfaaKwQIXwfbGtdLmRzSohojooA45hqIOKUBHwpBeqT9WzvmwOOnFnGQqhSYg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc6731080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>2bb079bb-6657-4bec-8d13-ef87aeb250b0</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:02:23</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>d149a7c1-2815-4cea-bd3c-b8683980cdcc</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc6731080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>GhWMLOt7o2VuJTlishyii+7irtU=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>L5GAAKqhx3I+tiJAjmN1iuXnb+8jMmus+NcuzwetJETp426by0BuTPwjC8xbeMbHykcxlfcXQySlYxfxuK0X1rnv0iwckdoS/YxOklZMtfyzlzl+3ifzx3/8LKr1p7hjy/NJ7fm7vDdkbMY2xbHCcVoW7c6kTtqquk21NUocn4VCbm5YlUpNKE4rZ7SkcUnJ5tcybTg19ijUQNFo7kuSPiM2/hn1GTOGLF2oWimIKYNhLcvz7csNLDSK5B5leBp0050b53Mi69oOru759L3fI4KpsQfaaKwQIXwfbGtdLmRzSohojooA45hqIOKUBHwpBeqT9WzvmwOOnFnGQqhSYg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>b024f759-4b45-4053-bd8c-cd2994390b19</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T16:04:16</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T16:04:16</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>5e46d865c4c4eb83b6016321388af902</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>b024f759-4b45-4053-bd8c-cd2994390b19</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T16:04:16</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T16:04:16</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>5e46d865c4c4eb83b6016321388af902</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>znMY7L8cUjzN5fMUkGMWoJYQaPI=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>h4nuf+U5JhN1htbGbEH8p89hus9mcMY4QgJ1C73XVdOtv+To1VP5byv0Q7evbS6P
+HxPbttJG1bGsqdl+pKUaazvOZ/Qb3t3n50fAJkOjPduqKRuFqeAQ+C7QowxYcGFt
+9YhpkDY4q8eEgMB+5AjjT7qpXcCjuU3JkAw5MtySnhU9s6dewTIW56YahGV45AK3
+Ik35J3uRYHyThHKT0GtgDgP+4AQoCI3YXdZiFFkKKa9Z5thIZLMWWPIeeC6TWWZd
+xaBC4LoePYYnRPe0c6KJXXoDNUoyfioE2hTFMDZkCH0EgJ3jZptrCKz3QFJobPl6
+w97NtY2EGXVVFZrUUots0A==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd5809080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>b024f759-4b45-4053-bd8c-cd2994390b19</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:04:16</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>8697c37a-1f79-4064-9d84-23f214995d2d</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd5809080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>UVCs4Byj0/LywMGbLBp7oTjieA8=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>sSoYu0RrvOpLDFj7AyYA52OOElzBy31SVum4Cgm5cxpf/i36Smg6wgF48SnsGLJxQTP00fH2ISiDgE7e0mRg0N7cl71c0QA1X0f91dbSS7Sv/cFbdv1oOnsqDd7NjvbEUyPBCpVyUx39RYVnJgskR9J7beeDVmbUIdBj9P4tvjWUqTcowug/CRPruXoE/TBo3VWhvK1WPOP2AOIXPiZ52/Iz+HjEqRIywS8/fLE+ufz9IW6Tl1/6YTjxAk/2TweyCMyWksRYRkG762w/QKcc8Wpq/iTKb8/tDsKdk/6Q5hnNREv5GGVlHRSl9NIhz2l5+eIfrC16zKfPagO68Y0tqA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xd5809080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>b024f759-4b45-4053-bd8c-cd2994390b19</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:04:16</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>8697c37a-1f79-4064-9d84-23f214995d2d</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xd5809080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>UVCs4Byj0/LywMGbLBp7oTjieA8=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>sSoYu0RrvOpLDFj7AyYA52OOElzBy31SVum4Cgm5cxpf/i36Smg6wgF48SnsGLJxQTP00fH2ISiDgE7e0mRg0N7cl71c0QA1X0f91dbSS7Sv/cFbdv1oOnsqDd7NjvbEUyPBCpVyUx39RYVnJgskR9J7beeDVmbUIdBj9P4tvjWUqTcowug/CRPruXoE/TBo3VWhvK1WPOP2AOIXPiZ52/Iz+HjEqRIywS8/fLE+ufz9IW6Tl1/6YTjxAk/2TweyCMyWksRYRkG762w/QKcc8Wpq/iTKb8/tDsKdk/6Q5hnNREv5GGVlHRSl9NIhz2l5+eIfrC16zKfPagO68Y0tqA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>183e7509-c4d0-4129-83dd-8cb338f9c24c</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T16:04:36</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T16:04:36</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>cde715067629125607d98e1793526a6c</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>183e7509-c4d0-4129-83dd-8cb338f9c24c</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T16:04:36</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T16:04:36</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>cde715067629125607d98e1793526a6c</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>dAq87nIcVHzU7q8w9H2JKh0mnLM=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>Ed89eta4eDabOvWjCPwhMui+2vhcWDisy4V4iPdc2Bq4ubCbgouGHULaFl88+2b+
+mtjZOutK7OF4z2OpHW5rvOj7GONo0ylTRtkFkTr0xXrlAFuk2GjmWy06n4ykeCsV
+vdRx7thwwqsa0Hk/1fNaiRqFxMj0ddXiczHjswVABwFfsB8Yb2CjOluyg36ISYcJ
+4ENf/N65VTcGjMKrSvc8IcJc8tCJNeZlnpsgm0eUc4vpvUf734sgWzrbqBAe/38v
+74O3qhckbbf8wNVhiqpU39DCW8vNDWn2sZrz4DX4ekIUgrzNd+IrSRgSdm6x7PPE
+NwzbiPtOSdnQ+a3QuUWrug==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc9833080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>183e7509-c4d0-4129-83dd-8cb338f9c24c</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:04:36</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>636f39e1-0f44-433f-a4a2-6c62510460a9</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc9833080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>8DS63nlve/43OcUVSV0iJDO2znA=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>YmZlct0oT2TYU1AIeVLM4fpOejEvbbd5z5uMXhmlx7lgOU9u+LCeJozat81XdE3MrOUQqwnyhKsoZ8awpINCw1j25PfwdCC1LUm2PWjnrtWSxM0FpDlayeXxdn4IlrOMLmdhMCoNjsXVQ8OCZuYGHMjvroQqdBGoUFkcWuAthzwWbyGyL2E9Wzw2ND5KyNF8LLMgnTolz0KVe0jSNV/lRg2vtWnQPVupLke6242R7lZkQibsTqju6GqJ9nr3mO/BDKz6XW97AdwU0VhF5kEXRUTi4+w5IclEqasrOUcXnt8J6yB9QOKh5KyU6lWEG3Bpzp2pk5WFkUIUsl1i5GfE/A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc9833080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>183e7509-c4d0-4129-83dd-8cb338f9c24c</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:04:36</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>636f39e1-0f44-433f-a4a2-6c62510460a9</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc9833080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>8DS63nlve/43OcUVSV0iJDO2znA=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>YmZlct0oT2TYU1AIeVLM4fpOejEvbbd5z5uMXhmlx7lgOU9u+LCeJozat81XdE3MrOUQqwnyhKsoZ8awpINCw1j25PfwdCC1LUm2PWjnrtWSxM0FpDlayeXxdn4IlrOMLmdhMCoNjsXVQ8OCZuYGHMjvroQqdBGoUFkcWuAthzwWbyGyL2E9Wzw2ND5KyNF8LLMgnTolz0KVe0jSNV/lRg2vtWnQPVupLke6242R7lZkQibsTqju6GqJ9nr3mO/BDKz6XW97AdwU0VhF5kEXRUTi4+w5IclEqasrOUcXnt8J6yB9QOKh5KyU6lWEG3Bpzp2pk5WFkUIUsl1i5GfE/A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>f520928e-2b1c-4e22-b77e-5297e37d6275</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T16:05:23</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T16:05:23</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>0ab3306d47f34c7cbc4ffabd34a4a6ae</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>f520928e-2b1c-4e22-b77e-5297e37d6275</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T16:05:23</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T16:05:23</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>0ab3306d47f34c7cbc4ffabd34a4a6ae</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>PfbA4ixth5Is+13uqpZ/TpYIiiQ=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>ZKGBEz95qS1P4wa1B3lLYV3799FB9FUq8WMepJF94Tci9SXNDwbw42fXm4Q+hm3s
+7skO7BxBXkzM7J+kwzNzPNIGiUnc33FAIfxLBZmZd0rzqLMuKMzYMVoSueBvax+R
+ZH7mcaIWCVM+oILU5ajsrtBENF+sLYkVdON7M0YGmGQyJMLkScvngf+74ZRuLdwC
+88oEwbCjokTSzYhO3ZVE4IrTyr9LyMxV5CwbvjoKhKqDB8/HJVK0ZYZDB1R2wRpg
+k/f7JHlLahwApElJ8IuuNvq+fndFVNqkPKe8SLK7GWP2q8fTIIzlYm5b0pu9hPyl
+fLP/8Hr9i19NmKI5eZEtTA==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc81a0080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>f520928e-2b1c-4e22-b77e-5297e37d6275</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:05:23</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>d433949d-3449-4470-a3d4-fd2bae2d3403</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc81a0080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>M+GSixxpSppDlXub9tFxpyJheUc=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>ohGfKGwn0mFGXO/xct6geq6Qi/oxPvfMMN1dYcZ2Cqwk3KSmO+fzzS+Giy49fWUpk674BkoRNr9Xga5+oyqE/uxE03mtxAw5ISRGyCCoaDEWFEEnNMjdIno99p0aqV5jUhjDgi30sZRkOJQUBBzNyP0IqdCsQgdmcnCA7WhQCSdveVBcLyUQVNdKG3sOY3GZJqCrBSQBxi9DmFqvZQmU9aF/aJbbhcUL+qw69ujTfLn7df/UGqsWhHZQW2Rc38h/fFW7qDJbtRLNSeSCD5awG5KUN0kZTBDb2hai2XboS9mSzJOAqUODpviIPDZqhdK8elbdAUeIvjWHhd/EoHLzHw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xc81a0080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>f520928e-2b1c-4e22-b77e-5297e37d6275</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T16:05:23</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>d433949d-3449-4470-a3d4-fd2bae2d3403</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xc81a0080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>M+GSixxpSppDlXub9tFxpyJheUc=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>ohGfKGwn0mFGXO/xct6geq6Qi/oxPvfMMN1dYcZ2Cqwk3KSmO+fzzS+Giy49fWUpk674BkoRNr9Xga5+oyqE/uxE03mtxAw5ISRGyCCoaDEWFEEnNMjdIno99p0aqV5jUhjDgi30sZRkOJQUBBzNyP0IqdCsQgdmcnCA7WhQCSdveVBcLyUQVNdKG3sOY3GZJqCrBSQBxi9DmFqvZQmU9aF/aJbbhcUL+qw69ujTfLn7df/UGqsWhHZQW2Rc38h/fFW7qDJbtRLNSeSCD5awG5KUN0kZTBDb2hai2XboS9mSzJOAqUODpviIPDZqhdK8elbdAUeIvjWHhd/EoHLzHw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.plugin:list index out of range
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/suds/plugin.py", line 254, in __call__
+    method(ctx)
+  File "/home/bole/fiskalizacija/fiskal.py", line 29, in sending
+    racunzahtjev = doc2.xpathEval('//*[local-name()="%s"]' % msgtype)[0]
+IndexError: list index out of range
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<tns:EchoResponse xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73">ping</tns:EchoResponse></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<tns:EchoResponse xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73">ping</tns:EchoResponse></soap:Body></soap:Envelope>
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/FiskalizacijaSchema.xsd)
+DEBUG:suds.transport.http:opening (file:///home/bole/fiskalizacija/schema/xmldsig-core-schema.xsd)
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:RacunZahtjev>
+         <ns1:Zaglavlje>
+            <ns1:IdPoruke>7225cdf6-b6f8-4922-809c-1d2917be608a</ns1:IdPoruke>
+            <ns1:DatumVrijeme>18.02.2013T17:48:01</ns1:DatumVrijeme>
+         </ns1:Zaglavlje>
+         <ns1:Racun>
+            <ns1:Oib>57699704120</ns1:Oib>
+            <ns1:USustPdv>true</ns1:USustPdv>
+            <ns1:DatVrijeme>18.02.2013T17:48:01</ns1:DatVrijeme>
+            <ns1:OznSlijed>P</ns1:OznSlijed>
+            <ns1:BrRac>
+               <ns1:BrOznRac>1</ns1:BrOznRac>
+               <ns1:OznPosPr>TESTIRAMO</ns1:OznPosPr>
+               <ns1:OznNapUr>12</ns1:OznNapUr>
+            </ns1:BrRac>
+            <ns1:Pdv>
+               <ns1:Porez>
+                  <ns1:Stopa>25.00</ns1:Stopa>
+                  <ns1:Osnovica>100.00</ns1:Osnovica>
+                  <ns1:Iznos>25.00</ns1:Iznos>
+               </ns1:Porez>
+            </ns1:Pdv>
+            <ns1:IznosUkupno>125.00</ns1:IznosUkupno>
+            <ns1:NacinPlac>G</ns1:NacinPlac>
+            <ns1:OibOper>57699704120</ns1:OibOper>
+            <ns1:ZastKod>eccc2ab0d4720ac6d0d45083ebb3547e</ns1:ZastKod>
+            <ns1:NakDost>false</ns1:NakDost>
+         </ns1:Racun>
+      </ns1:RacunZahtjev>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="RacunZahtjev">
+         <tns:Zaglavlje>
+            <tns:IdPoruke>7225cdf6-b6f8-4922-809c-1d2917be608a</tns:IdPoruke>
+            <tns:DatumVrijeme>18.02.2013T17:48:01</tns:DatumVrijeme>
+         </tns:Zaglavlje>
+         <tns:Racun>
+            <tns:Oib>57699704120</tns:Oib>
+            <tns:USustPdv>true</tns:USustPdv>
+            <tns:DatVrijeme>18.02.2013T17:48:01</tns:DatVrijeme>
+            <tns:OznSlijed>P</tns:OznSlijed>
+            <tns:BrRac>
+               <tns:BrOznRac>1</tns:BrOznRac>
+               <tns:OznPosPr>TESTIRAMO</tns:OznPosPr>
+               <tns:OznNapUr>12</tns:OznNapUr>
+            </tns:BrRac>
+            <tns:Pdv>
+               <tns:Porez>
+                  <tns:Stopa>25.00</tns:Stopa>
+                  <tns:Osnovica>100.00</tns:Osnovica>
+                  <tns:Iznos>25.00</tns:Iznos>
+               </tns:Porez>
+            </tns:Pdv>
+            <tns:IznosUkupno>125.00</tns:IznosUkupno>
+            <tns:NacinPlac>G</tns:NacinPlac>
+            <tns:OibOper>57699704120</tns:OibOper>
+            <tns:ZastKod>eccc2ab0d4720ac6d0d45083ebb3547e</tns:ZastKod>
+            <tns:NakDost>false</tns:NakDost>
+         </tns:Racun>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#RacunZahtjev">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>es137DIVJic0gt7pg1lWftE7XSc=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>jre83QUkipBzMZ8f1PEBHQFVTFqAdRga1BUGX1WY5C79WzwZz8O9lFc7c7mMzD+2
+4BGeUJ60zNTjlVWdEnaGpOnK8h3uh7WZn6xgI0MZd8xefpmxQY9ko4DuWhVewGRV
+YST9sijQP1knLBYa1+0Q2+dxyOEMyYpSiFNKg8MtRYEzIxq78ryKmvSB4WQ+kBtT
+LQGNfXmhnv6/bhuRSRT5KGLnFRHC7B3HF7VIqa+uFhZs//L7w12tSz3GWrje9ki9
+j7yaxuCSsjgzAJlkauXpvDV4NpqFNxmJvFe9GX55VT7X6zeQkgjpSvqoiFx4f55A
+n8bRmhN9Ehq4RiNCLQU0Xw==</SignatureValue>
+<KeyInfo>
+<X509Data>
+
+
+<X509Certificate>MIIEyTCCA7GgAwIBAgIEPssSTzANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJI
+UjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjEwMDUwODUyNTFa
+Fw0xNDEwMDUwOTIyNTFaMFgxCzAJBgNVBAYTAkhSMSQwIgYDVQQKExtaMyBDT01Q
+VVRFUlMuIEhSNTc2OTk3MDQxMjAxEDAOBgNVBAcTB1ZVS09WQVIxETAPBgNVBAMT
+CEZJU0tBTCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK1NlGfH
+EYDt1d3Hw5aPPhf5rFKTTqNt6PDBYrEXk7U6tYnBMwIQWvmqVmdkECBXLcCn1gZw
+oncJvJg0Q1YqHR8/HGgeRwl9LiQgsPoQydOuo461w+q2Ok4e59ejYwCz4ByvSK42
+TOMa7t3br/1JsL8iKtZ6TXo0WFmSNNPOW5O1uK0o1CJ5toNWQondIsrBfL3905F4
+0olbj+/GRC/axsAEbLL96IJJzTpodanrzr+so68oIKfEnQSB0M20KpEiNGHOuOAD
+dCuaBJYcD2R7v5RUoTj/z/xIo1qoepuUL7+0lonfea7bHYKNP3NYyK+OdNIbTL0p
+ijNukbTb/hBniQIDAQABo4IBxjCCAcIwCwYDVR0PBAQDAgWgMEIGA1UdIAQ7MDkw
+NwYJK3yIUAUfBQMBMCowKAYIKwYBBQUHAgEWHGh0dHA6Ly9kZW1vLXBraS5maW5h
+LmhyL2Nwcy8wJgYDVR0RBB8wHYEbZHJhemVuLnpvdmtvQHozY29tcHV0ZXJzLmhy
+MIHOBgNVHR8EgcYwgcMwQqBAoD6kPDA6MQswCQYDVQQGEwJIUjENMAsGA1UEChME
+RklOQTENMAsGA1UECxMEREVNTzENMAsGA1UEAxMEQ1JMNzB9oHugeYZPbGRhcDov
+L2RlbW8tbGRhcC5maW5hLmhyL291PURFTU8sbz1GSU5BLGM9SFI/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdCUzQmJpbmFyeYYmaHR0cDovL2RlbW8tcGtpLmZpbmEu
+aHIvY3JsL2RlbW9jYS5jcmwwKwYDVR0QBCQwIoAPMjAxMjEwMDUwODUyNTFagQ8y
+MDE0MTAwNTA5MjI1MVowHwYDVR0jBBgwFoAUemAjjkidMmuk5S3duFm0lPxCYp4w
+HQYDVR0OBBYEFErcuDrCoBXFCfu3bXFqJwzDpr8tMAkGA1UdEwQCMAAwDQYJKoZI
+hvcNAQEFBQADggEBALJ2zzdtGo86oeNF+JK/nxgAG6Ds4ILa7rLaSfiu9pwmugXZ
+K5MqU/J9tmzVN4mDNYOC/GRahaV7AY01fGR/iA/9zyTBX5hAOd28MI6YL0IT2FFI
+PYERU+Ei82hCaJ0VLKbcdDhLX+klPXCnYnzsSLcRTdPy36DKVUAROCNbroMPANx+
+AFNpMWdnqpIHOPn4aiCUhAAWsL7uPFF5nQKLAvJoRngu8ZINvIEOt4VzcRKsS6XJ
+CoLFq3uk99mG2+Ko119ABf0TTZPitV4W7wsMOtT2m0Qf1ua0jobAdDZj2M3k2l90
++yqz6xdvFIt32Un4r31Qf/ErB5j0QHXHJbeLnAg=</X509Certificate>
+<X509IssuerSerial>
+<X509IssuerName>OU=DEMO,O=FINA,C=HR</X509IssuerName>
+<X509SerialNumber>1053495887</X509SerialNumber>
+</X509IssuerSerial>
+</X509Data>
+</KeyInfo>
+</Signature></tns:RacunZahtjev>
+</soapenv:Body></soapenv:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/racuni"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xcb29a080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>7225cdf6-b6f8-4922-809c-1d2917be608a</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T17:48:01</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>a5bb69e7-bd87-479b-bf2b-0e2ba1c4688f</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xcb29a080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>hTIxUOJuJukg3DAmClaA2to+6Ao=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>UqiVdLePHDiKvhDj9kplUtkWVIdNISFg+Z0XtO7IATcWyaj+e4TV7JzCcikYKf66xsv1xGWb+yBV5F64Sk54N8SDeXEsNtdCeshRzU4D9S21vhU8AgrFI/PDtKMmxAwa4jcwqCRIAK23ymwnzetRedVa43NXSHzNBPQjXyGxF8P4um65QqLPErPdkyXwZVYk2kK6t24/xhlleuwdfIT/f6DAhTGPmw+uT7x9yUDkPpLJlmIz0QYOPCGBwyrbpw3Kjv/esyGggpUnmSewLPJV3YUIu28I+YSCO+0f3GV3O1qJs2r3+aCUtoVZP8T5xdOZk7pcj+OTK/hx75ILarB7xA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><tns:RacunOdgovor Id="G0xcb29a080-4D" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73"><tns:Zaglavlje><tns:IdPoruke>7225cdf6-b6f8-4922-809c-1d2917be608a</tns:IdPoruke><tns:DatumVrijeme>18.02.2013T17:48:01</tns:DatumVrijeme></tns:Zaglavlje><tns:Jir>a5bb69e7-bd87-479b-bf2b-0e2ba1c4688f</tns:Jir><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <Reference URI="#G0xcb29a080-4D">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>hTIxUOJuJukg3DAmClaA2to+6Ao=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>UqiVdLePHDiKvhDj9kplUtkWVIdNISFg+Z0XtO7IATcWyaj+e4TV7JzCcikYKf66xsv1xGWb+yBV5F64Sk54N8SDeXEsNtdCeshRzU4D9S21vhU8AgrFI/PDtKMmxAwa4jcwqCRIAK23ymwnzetRedVa43NXSHzNBPQjXyGxF8P4um65QqLPErPdkyXwZVYk2kK6t24/xhlleuwdfIT/f6DAhTGPmw+uT7x9yUDkPpLJlmIz0QYOPCGBwyrbpw3Kjv/esyGggpUnmSewLPJV3YUIu28I+YSCO+0f3GV3O1qJs2r3+aCUtoVZP8T5xdOZk7pcj+OTK/hx75ILarB7xA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIExDCCA6ygAwIBAgIEPssQcTANBgkqhkiG9w0BAQUFADArMQswCQYDVQQGEwJIUjENMAsGA1UEChMERklOQTENMAsGA1UECxMEREVNTzAeFw0xMjA5MjYwODExNDlaFw0xNDA5MjYwODQxNDlaMHgxCzAJBgNVBAYTAkhSMQ0wCwYDVQQKEwRGSU5BMQ0wCwYDVQQLEwRERU1PMREwDwYDVQQLEwhQb3Nsb3ZuaTEgMB4GA1UECxMXQVBJUyBJVCBELk8uTy4gODA1NDEzNzIxFjAUBgNVBAMTDWZpc2thbGNpc3Rlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC81TtKtJ84emCS/HK7gSovjNdluZWB0DbIMq3cBFpOpmurcbDCJ1Z17XiPLa+UWYIqyAjHQyDnG/H4c5EeGoli9swz5QcZFBmyXTpSd3GuMROgUAd4bcvbw1/HDONE5cE8PL11GIy8gi5ANZkujalYmx+1ImnhHxx1Bh2UJ/bcl2eXPtieBQBwtClATSzseB5FFz8LcSyfzM7h39PsAIZ0p8YzH7W+307gvgrJHYb/n4ADwlxieHqb5j74DVD0rUPcUE5d0nSZ7hfEkW8xICgs1Ly6Vu3w7Z5M8vb4QmoPnlT1EaHCXiweuK6vjkUk8RQmYY4lTFBs8zHiG7h4n9bPAgMBAAGjggGhMIIBnTAOBgNVHQ8BAf8EBAMCBaAwQgYDVR0gBDswOTA3BgkrfIhQBR8FBAIwKjAoBggrBgEFBQcCARYcaHR0cDovL2RlbW8tcGtpLmZpbmEuaHIvY3BzLzCBzgYDVR0fBIHGMIHDMEKgQKA+pDwwOjELMAkGA1UEBhMCSFIxDTALBgNVBAoTBEZJTkExDTALBgNVBAsTBERFTU8xDTALBgNVBAMTBENSTDcwfaB7oHmGT2xkYXA6Ly9kZW1vLWxkYXAuZmluYS5oci9vdT1ERU1PLG89RklOQSxjPUhSP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QlM0JiaW5hcnmGJmh0dHA6Ly9kZW1vLXBraS5maW5hLmhyL2NybC9kZW1vY2EuY3JsMCsGA1UdEAQkMCKADzIwMTIwOTI2MDgxMTQ5WoEPMjAxNDA5MjYwODQxNDlaMB8GA1UdIwQYMBaAFHpgI45InTJrpOUt3bhZtJT8QmKeMB0GA1UdDgQWBBRgIJsZevSn6kDuSzChmaa9Sqr6sjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBBQUAA4IBAQCo5kJWaNjgS+UG7XQHsHersDFk4K5W/Y2Pbubary0j3IwJrveHbUR3HOb0KiVenF6+1FL3sCI/2tfH3wSszWL8Gkit8jUudTo5vDyLqEUXYDHlFUBwseudsPkUxPiQ6HuuFd3PiUAWf00chXD38eTjfapNu6VeQt4EORSO+rEXdhWihVb5HxFIVPTkqHmq1KINwtV9+thwE3hNMwacRa4gwTB1O+jadVlJQMq+kgwnLGLBcwr0W+x1ye6MPSYEUxSNFGHPG/evP9DRLwJtR3ngvlCDusnO+A75Nn40VYcoIjw6EN1V+plK+HkLye0zzLsnHIWTSGfZ2sQVG5xCURiI</X509Certificate><X509IssuerSerial><X509IssuerName>OU=DEMO, O=FINA, C=HR</X509IssuerName><X509SerialNumber>1053495409</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunOdgovor></soap:Body></soap:Envelope>
+DEBUG:suds.client:sending to (https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest)
+message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+ERROR:suds.plugin:list index out of range
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/suds/plugin.py", line 254, in __call__
+    method(ctx)
+  File "/home/bole/fiskalizacija/fiskal.py", line 29, in sending
+    racunzahtjev = doc2.xpathEval('//*[local-name()="%s"]' % msgtype)[0]
+IndexError: list index out of range
+DEBUG:suds.client:headers = {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8'}
+DEBUG:suds.transport.http:sending:
+URL:https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest
+HEADERS: {'SOAPAction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'Content-Type': 'text/xml; charset=utf-8', 'Content-type': 'text/xml; charset=utf-8', 'Soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"'}
+MESSAGE:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns1:EchoRequest>ping</ns1:EchoRequest>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
+DEBUG:suds.transport.http:received:
+CODE: 200
+HEADERS: {'transfer-encoding': 'chunked', 'soapaction': '"http://e-porezna.porezna-uprava.hr/fiskalizacija/2012/services/FiskalizacijaService/echo"', 'host': 'cistest.apis-it.hr:8449', 'content-type': 'text/xml', 'user-agent': 'Python-urllib/2.7'}
+MESSAGE:
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<tns:EchoResponse xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73">ping</tns:EchoResponse></soap:Body></soap:Envelope>
+DEBUG:suds.client:http succeeded:
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<tns:EchoResponse xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 FiskalizacijaSchema.xsd " xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73">ping</tns:EchoResponse></soap:Body></soap:Envelope>
