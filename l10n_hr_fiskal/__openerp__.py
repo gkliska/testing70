@@ -34,6 +34,7 @@ Author: Davor Bojkić - Bole @ DAJ MI 5
         www.dajmi5.com
 
 Contributions:
+    
 
 Description:
 - Prijava objekta na poreznu upravi
@@ -45,7 +46,7 @@ TODO
 
 
 """,
-    "version" : "1.01",
+    "version" : "1.00",
     "author" : "DAJ MI 5",
     "category" : "Localisation/Croatia",
     "website": "http://www.dajmi5.com",
@@ -57,9 +58,10 @@ TODO
                 ],
     'init_xml': [],
     'data': [
-                   #'security/ir.model.access.csv',
-                   #'l10n_hr_base_view.xml',
-                   'l10n_hr_fiskal_view.xml'
+                   'view/l10n_hr_fiskal_view.xml',
+                   'view/res_certificate_view.xml',
+                   'view/l10n_hr_log_view.xml',
+                   'data/res.certificate.server.csv'  #-->TODO Dodati linkove za demo i prod servere... 
                    ],
     "demo" : [],
     'test' : [],

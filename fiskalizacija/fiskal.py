@@ -14,9 +14,9 @@ certFile = 'cert.pem'
 
 import logging
 
-logging.basicConfig(level=logging.INFO, filename='/var/log/fiskalizacija.log')
-logging.getLogger('suds.client').setLevel(logging.DEBUG)
-logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+#logging.basicConfig(level=logging.INFO, filename='/var/log/fiskalizacija.log')
+#logging.getLogger('suds.client').setLevel(logging.DEBUG)
+#logging.getLogger('suds.transport').setLevel(logging.DEBUG)
 
 class DodajPotpis(MessagePlugin):
   def sending(self, context):
@@ -32,7 +32,7 @@ class DodajPotpis(MessagePlugin):
     x = doc2.getRootElement().newNs('http://www.apis-it.hr/fin/2012/types/f73', 'tns')
  
     for i in doc2.xpathEval('//*'):
-      i.setNs(x)
+        i.setNs(x)
 
     libxml2.initParser()
     libxml2.substituteEntitiesDefault(1)
@@ -81,30 +81,30 @@ class DodajPotpis(MessagePlugin):
 ############################################################################################################################################
 
 class Fiskalizacija():
-  wsdl = 'file:///home/bole/fiskalizacija/wsdl/FiskalizacijaService.wsdl' # Za test
+    #wsdl = 'file:///home/bole/openerp/git/fiskalizacija/wsdl/FiskalizacijaService.wsdl' # Za test
+    wsdl = 'wsdl/FiskalizacijaService.wsdl' # Za test
 
-  client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
-  #client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
-  client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
+    client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
+    #client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
+    client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
 
-  racun = client2.factory.create('tns:Racun')
-  zaglavlje = client2.factory.create('tns:Zaglavlje')
+    racun = client2.factory.create('tns:Racun')
+    zaglavlje = client2.factory.create('tns:Zaglavlje')
 
-  def izracunaj_zastitni_kod(self, datumvrijeme):    
-    medjurezultat = self.racun.Oib + str(datumvrijeme) + str(self.racun.BrRac.BrOznRac) + self.racun.BrRac.OznPosPr + self.racun.BrRac.OznNapUr + str(self.racun.IznosUkupno)
-    pkey = RSA.load_key(keyFile)
-    signature = pkey.sign(hashlib.sha1(medjurezultat).digest())
-    self.racun.ZastKod = hashlib.md5(signature).hexdigest()
+    def izracunaj_zastitni_kod(self, datumvrijeme):    
+        medjurezultat = self.racun.Oib + str(datumvrijeme) + str(self.racun.BrRac.BrOznRac) + self.racun.BrRac.OznPosPr + self.racun.BrRac.OznNapUr + str(self.racun.IznosUkupno)
+        pkey = RSA.load_key(keyFile)
+        signature = pkey.sign(hashlib.sha1(medjurezultat).digest())
+        self.racun.ZastKod = hashlib.md5(signature).hexdigest()
 
-  def posalji(self):
-    return self.client2.service.racuni(self.zaglavlje, self.racun)
+    def posalji(self):
+        return self.client2.service.racuni(self.zaglavlje, self.racun)
 
-
-  def generiraj_poruku(self):
-    self.client2.options.nosend = True
-    poruka = str(self.client2.service.racuni(self.zaglavlje, self.racun).envelope)
-    self.client2.options.nosend = False
-    return poruka
+    def generiraj_poruku(self):
+        self.client2.options.nosend = True
+        poruka = str(self.client2.service.racuni(self.zaglavlje, self.racun).envelope)
+        self.client2.options.nosend = False
+        return poruka
   
-  def echo(self):
-    self.echo = self.client2.service.echo('ping')
+    def echo(self):
+        self.echo = self.client2.service.echo('testtttt')

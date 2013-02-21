@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#coding:utf-8
 
 import sys, time, libxml2, xmlsec, os, StringIO, uuid, base64, hashlib, suds
 from suds.client import Client
@@ -13,15 +14,15 @@ certFile = 'cert.pem'
 
 import logging
 
-logging.basicConfig(level=logging.INFO, filename='/var/log/fiskalizacija.log')
-logging.getLogger('suds.client').setLevel(logging.DEBUG)
-logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+#logging.basicConfig(level=logging.INFO, filename='/var/log/fiskalizacija.log')
+#logging.getLogger('suds.client').setLevel(logging.DEBUG)
+#logging.getLogger('suds.transport').setLevel(logging.DEBUG)
 
 class DodajPotpis(MessagePlugin):
-    def sending(self, context):
+  def sending(self, context):
 
-        msgtype = "RacunZahtjev"
-        if "PoslovniProstorZahtjev" in context.envelope: msgtype = "PoslovniProstorZahtjev"
+    msgtype = "RacunZahtjev"
+    if "PoslovniProstorZahtjev" in context.envelope: msgtype = "PoslovniProstorZahtjev"
     
     doc2 = libxml2.parseDoc(context.envelope)
 
@@ -67,8 +68,8 @@ class DodajPotpis(MessagePlugin):
     
     if dsig_ctx is not None: dsig_ctx.destroy()
     context.envelope = """<?xml version="1.0" encoding="UTF-8"?>
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-        <soapenv:Body>""" + doc2.serialize().replace('<?xml version="1.0" encoding="UTF-8"?>','') + """</soapenv:Body></soapenv:Envelope>""" # Ugly hack
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>""" + doc2.serialize().replace('<?xml version="1.0" encoding="UTF-8"?>','') + """</soapenv:Body></soapenv:Envelope>""" # Ugly hack
     
     # Shutdown xmlsec-crypto library, ako ne radi HTTPS onda ovo treba zakomentirati da ga ne ugasi prije reda
     xmlsec.cryptoShutdown()
@@ -80,16 +81,17 @@ class DodajPotpis(MessagePlugin):
 ############################################################################################################################################
 
 class Fiskalizacija():
-    wsdl = 'wsdl/FiskalizacijaService.wsdl' # Za test
-    
-    #client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
-    client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
+    #wsdl = 'file:///home/bole/openerp/git/fiskalizacija/wsdl/FiskalizacijaService.wsdl' # Za test
+    wsdl = 'file:///media/documents/openerp/openerp-7.0-20130212-002145/openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl' # Za test
+
+    client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
+    #client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
     client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
-    
+
     racun = client2.factory.create('tns:Racun')
     zaglavlje = client2.factory.create('tns:Zaglavlje')
-    
-    def izracunaj_zastitni_kod(self, datumvrijeme):
+
+    def izracunaj_zastitni_kod(self, datumvrijeme):    
         medjurezultat = self.racun.Oib + str(datumvrijeme) + str(self.racun.BrRac.BrOznRac) + self.racun.BrRac.OznPosPr + self.racun.BrRac.OznNapUr + str(self.racun.IznosUkupno)
         pkey = RSA.load_key(keyFile)
         signature = pkey.sign(hashlib.sha1(medjurezultat).digest())
@@ -98,7 +100,6 @@ class Fiskalizacija():
     def posalji(self):
         return self.client2.service.racuni(self.zaglavlje, self.racun)
 
-
     def generiraj_poruku(self):
         self.client2.options.nosend = True
         poruka = str(self.client2.service.racuni(self.zaglavlje, self.racun).envelope)
@@ -106,5 +107,4 @@ class Fiskalizacija():
         return poruka
   
     def echo(self):
-        print "DELA"
-        #self.echo = self.client2.service.echo('ping')
+        self.echo = self.client2.service.echo('testtttt')

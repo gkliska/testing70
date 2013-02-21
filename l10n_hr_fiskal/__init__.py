@@ -24,8 +24,9 @@
 #
 ##############################################################################
 
-import l10n_hr_fiskal
-#import fiskal
+import l10n_hr_fiskalizacija
+import res_certificate
+
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
