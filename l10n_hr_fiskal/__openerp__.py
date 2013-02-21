@@ -5,10 +5,11 @@
 #    Module: l10n_hr_fiskal
 #    Author: Davor Bojkić
 #    mail:   bole@dajmi5.com
-#    Copyright (C) 2012- Daj Mi 5, Zagreb
+#    Copyright (C) 2012- Daj Mi 5, 
 #                  http://www.dajmi5.com
-#    Contributions: 
-#
+#    Contributions: Hrvoje ThePython - Free Code!
+#                   Goran Kliska (AT) Slobodni Programi
+#                    
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
@@ -27,41 +28,54 @@
 {
     "name" : "Croatian localization - Fiscalization module",
     "description" : """
-Croatian localisation.
-======================
+OpenERP Fiskalizacija izdanih računa
+====================================
 
 Author: Davor Bojkić - Bole @ DAJ MI 5
         www.dajmi5.com
 
-Contributions:
-    
+Contributions: Hrvoje ThePython - Free Code!
+               Goran Kliska @ Slobodni Programi
 
 Description:
-- Prijava objekta na poreznu upravi
-TODO 
-- slanje echo metode
-- zapisi u bazi ( kada je izvršena prijava i eventualno izmjene
-- više prodajnih mjesta? - 
--  
+TODO:
+    a lot of stuff...  send echo and recive/log reply will be considered succes fro stage 1.
 
+v1.00    Dodane tablice pripadni views, 
+         zasada dodijeljeni izbornici Postavke/Fiskalizacija:
+            - l10n_hr_pprostor - podaci o poslovnim prostorima
+            - l10n_hr_log    - log komunikacije sa serverima 
+            - res_certificates - pohranjeni certifikati i ključevi
+            - res_certificates_servers - serveri naziv/link
+                - Podaci : Testni i Produkcijski server Porezne Uprave
+            - Ostali bitni a promjenjivi podaci preuzeti sa stranica porezne:
+                 wsdl/FiskalizacijaService.wsdl
+                 schema/FiskalizacijaSchema
+                 schema/xmldsig-core-schema.xsd
 
+Preduvjeti: 
+    na serveru instalirati:
+        python-dev ,
+        python-ms2crypto , 
+        libxmlsec1-dev
+    i onda build/install pyxmlsec-0.3.2 ili pronaći neki prikladniji! 
 """,
-    "version" : "1.00",
+    "version" : "1.01",
     "author" : "DAJ MI 5",
     "category" : "Localisation/Croatia",
     "website": "http://www.dajmi5.com",
 
     'depends': [
                 'base',
-               'base_vat',
-               'l10n_hr'
+                'base_vat',
+                'l10n_hr'
                 ],
     'init_xml': [],
     'data': [
                    'view/l10n_hr_fiskal_view.xml',
                    'view/res_certificate_view.xml',
                    'view/l10n_hr_log_view.xml',
-                   'data/res.certificate.server.csv'  #-->TODO Dodati linkove za demo i prod servere... 
+                   'data/res.certificate.server.csv'
                    ],
     "demo" : [],
     'test' : [],

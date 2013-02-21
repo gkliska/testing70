@@ -2,13 +2,14 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Module: l10n_hr_base
-#    Author: Goran Kliska
-#    mail:   gkliskaATgmail.com
-#    Copyright (C) 2011- Slobodni programi d.o.o., Zagreb
-#                 http://www.slobodni-programi.hr
-#    Contributions: 
-#
+#    Module: l10n_hr_fiskal
+#    Author: Davor Bojkić
+#    mail:   bole@dajmi5.com
+#    Copyright (C) 2012- Daj Mi 5, 
+#                  http://www.dajmi5.com
+#    Contributions: Hrvoje ThePython - Free Code!
+#                   Goran Kliska (AT) Slobodni Programi
+#                    
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
