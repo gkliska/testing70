@@ -24,10 +24,38 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-import l10n_hr_fiskalizacija
-import res_certificate
-import TEST
+from openerp.osv import fields,osv
 
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
+class test_table(osv.Model):
+    _name = 'testtable'
+    _description ='Testing purposes table - to be removed'
+    
+    def dummy(self):
+        pass   
+    
+    def _neka_suma(self,cr,uid,ids,field,arg,context=None):
+        tra=self.read(cr, uid, fields, context=None)
+        res=tra.br1 + tra.br2
+        return {'suma':res
+                }
+
+
+
+    def promjena1(self,cr,uid,ids,br1,br2,context=None):
+        a=br1+br2
+        b=str(br1)+str(br2)
+        return{'br2':a,
+               'test1':b}
+        
+        
+    _columns={
+              'name':fields.char('name', size=25),
+              'br1':fields.integer('BR1'),
+              'br2':fields.integer('BR2'),
+              'test1':fields.char('test1',size=25),
+              'test2':fields.char('test2',size=125),
+              'dane':fields.boolean('DaNe'),
+              #'suma':fields.function(_neka_suma,string='test sume',type='integer')
+              }

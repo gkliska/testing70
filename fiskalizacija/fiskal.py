@@ -14,9 +14,9 @@ certFile = 'cert.pem'
 
 import logging
 
-#logging.basicConfig(level=logging.INFO, filename='/var/log/fiskalizacija.log')
-#logging.getLogger('suds.client').setLevel(logging.DEBUG)
-#logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+logging.basicConfig(level=logging.INFO, filename='/var/log/fisk/fiskalizacija.log')
+logging.getLogger('suds.client').setLevel(logging.DEBUG)
+logging.getLogger('suds.transport').setLevel(logging.DEBUG)
 
 class DodajPotpis(MessagePlugin):
   def sending(self, context):

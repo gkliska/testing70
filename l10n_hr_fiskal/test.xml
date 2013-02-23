@@ -1,0 +1,58 @@
+<openerp>
+	<data>
+
+
+		<record model="ir.ui.view" id="test_tree_view">
+			<field name="name">test.tree</field>
+			<field name="model">testtable</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="name" />
+					<field name="br1" />
+					<field name="br2" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="test_form_view">
+			<field name="name">test.form</field>
+			<field name="model">testtable</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="form_string" version="7.0">
+					<header>
+						<button name="promjena1" string="TEST1" type="object" />
+						<button name="dummy" string="TEST2" type="object" class="oe_highlight" />
+						<!-- button name="dummy" string="TEST1" type="object" invisible="True" 
+							/ -->
+					</header>
+					<group string="TRATAT">
+						<field name="name" select="1" />
+						<field name="br1" on_change="promjena1(br1,br2)"/>
+						<field name="br2" on_change="promjena1(br1,br2)" />
+						<field name="test1" />
+						<field name="test2" />
+						<field name="dane" />
+						<!--  field name="suma"/-->
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_test_tree_view">
+			<field name="name">testtablevies</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">testtable</field>
+			<!-- <field name="domain">[('field_name','condition',criteria)]</field> -->
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="test_tree_view" />
+		</record>
+
+		<menuitem id="test_menu" name="test" parent="menu_fiskal_1"
+			action="action_test_tree_view" />
+
+
+	</data>
+</openerp>

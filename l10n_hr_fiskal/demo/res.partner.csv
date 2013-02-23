@@ -1,0 +1,5 @@
+"id","name","active","supplier","is_company","notification_email_send","vat_subjected","vat","street","city","zip"
+"res_partner_1","DAJ MI 5","True","True","True","comment","True","HR35052749252","Diogeneševa 8","Zagreb","10020"
+"res_partner_2","Slobodni programi d.o.o.","True","True","True","comment","True","HR55605027508","Gorjanska 23","Zagreb","10000"
+"res_partner_3","Oficia d.o.o.","True","True","True","comment","True",,,,
+"res_partner_4","Z3 Computers","True","True","True","comment","True","HR57699704120","Hrvatskog zrakoplovstva 37","Vukovar",""

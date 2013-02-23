@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_form">
+			<field name="name">l10n_hr_fis_pprostor_form</field>
+			<field name="model">l10n_hr_fis_pprostor</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Fiskalizacija" version="7.0">
+					<header>
+					   <button name="button_test" string="TEST" type="object" />
+					</header>
+					
+					<sheet>
+						<separator string="PRIJAVA POSLOVNOG PROSTORA U POREZNU UPRAVU" />
+						<group>
+							<field name="name" readonly="False" />
+							<field name="oznaka_pp" placeholder="PJ1 ili u skladu sa pravilnikom" />
+							<newline />
+							<field name="sustav_pdv" />
+						</group>
+						<notebook>
+							<page string="ADRESA">
+								<group colspan="2">
+									<field name="ulica" />
+									<group colspan="2" cols="4">
+										<field name="kbr" />
+										<field name="kbr_dodatak" />
+									</group>
+									<field name="posta" />
+									<field name="naselje" />
+								</group>
+
+							</page>
+							<page string="PRIJAVA" colspan="4">
+								<group>
+									<field name="sljed_racuna" string="Sljednost izdavanja računa" />
+									<field name="radno_vrijeme" string="Radno vrijeme objekta"
+										placeholder="npr: pon-pet 07:00-18:00 ili pon-pet 08:00-20:00, sub 08:00-14:00" />
+									<field name="spec" placeholder="Bez predznaka HR, npr : 35052749252"
+										string="OIB Informatičke tvrtke"
+										help="Upisuje se OIB informatičke trvtke koja je odgovorna za Program" />
+									<field name="res_certificate_id" ref="res_certificate"
+										string="Koristi Certifikat" />
+									<field name="res_certificate_server_id" ref="res_certificate_server"
+										string="Spajanje na server" />
+								</group>
+							</page>
+							<page string="KOMUNIKACIJA">
+								<!-- field name='log_ids' nolabel="1" >
+								    <tree>
+								        <field name="name"/>
+								        <field name="sadrzaj"/>
+								        <field name="type"/>
+								    </tree>
+								</field> -->
+								<!-- TODO: Dodati subform sa popisom pokušaja komunikacije -->
+								<!-- field name="l10n_hr_log_ids" context="{'form_view_ref': 'l10n_hr_log_tree'}" 
+									modifiers="{}"/ -->
+								<!-- button name="test" string="Test veze ECHO metodom" type="object" 
+									class="oe_highlight" / -->
+								
+							</page>
+							<page string="TESTING">
+							 <!-- field name="log_ids" nolabel="1" colspan="4" mode="tree">
+							     <tree string="LOGOVI">
+							         <field name="name"/>
+							         <field name="log_id"  />
+							     </tree>
+							  </field-->
+							</page>
+						</notebook>
+					</sheet>
+
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_tree">
+			<field name="name">l10n_hr_fis_pprostor_tree</field>
+			<field name="model">l10n_hr_fis_pprostor</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+			     
+				<tree string="Fiskalizacija poslovnog prostora">
+					<field name="name" />
+					<field name="oznaka_pp" />
+					<field name="ulica" />
+					<field name="kbr" />
+					<field name="posta" />
+					<field name="naselje" />
+				</tree>
+
+			</field>
+		</record>
+
+		<!--############################ ## ## ACTIONS ADD ## ############################## -->
+		<record model="ir.actions.act_window" id="l10n_hr_fis_pprostor_action1">
+			<field name="name">l10n_hr_fis_pprostor_form</field>
+			<field name="res_model">l10n_hr_fis_pprostor</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add new location.
+				</p>
+				<p>
+					In order to send invoice data to Tax office, you need to
+					enter
+					some data about your sale location and rules of numbering..
+					blah
+					blah.. more text to comme,
+					as well as translations
+				</p>
+			</field>
+
+		</record>
+
+		<!-- record model="ir.actions.act_window" id="fiskalizacija_echo"> <field 
+			name="name">fiskalizacija_echo</field> <field name="type">ir.actions.act_window</field> 
+			<field name="res_model">objectname</field> <field name="domain">[('field_name','condition',criteria)]</field>> 
+			<field name="view_type">form</field> <field name="view_mode">tree,form</field> 
+			<field name="view_id" ref="object_name_tree_view"/> </record > ################################### 
+			## ## MENU ITEMS add ## #################################### -->
+
+		<menuitem id="menu_fiskal_1" name="Fiskalizacija" parent="base.menu_administration"
+			sequence="1" />
+		<menuitem id="menu_fiskal_2" name="Prijava Objekata"
+			action="l10n_hr_fis_pprostor_action1" parent="menu_fiskal_1" />
+	</data>
+</openerp>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="l10n_hr_log_form_view">
+			<field name="name">l10n_hr_log_form</field>
+			<field name="model">l10n.hr.log</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Evidencija prometa">
+					<group colspan="4" col="2">
+						<field name="name" />
+						<field name="type" />
+						<field name="res_users_id" />
+
+						<field name="sadrzaj" />
+						<!-- button name="button_set_user" , string="UserSET", type="object"/ -->
+					</group>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="l10n_hr_log_tree_view">
+			<field name="name">l10n_hr_log_tree</field>
+			<field name="model">l10n.hr.log</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="name" select="1" />
+					<field name="type" />
+					
+
+				</tree>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="l10n_hr_log_action1">
+			<field name="name">l10n_hr_log_tree</field>
+			<field name="res_model">l10n.hr.log</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+
+
+		</record>
+
+		<menuitem id="menu_fiskal_3" name="Evidencija komunikacije"
+			action="l10n_hr_log_action1" parent="menu_fiskal_1" />
+	</data>
+</openerp>

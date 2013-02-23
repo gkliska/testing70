@@ -75,9 +75,17 @@ Preduvjeti:
                    'view/l10n_hr_fiskal_view.xml',
                    'view/res_certificate_view.xml',
                    'view/l10n_hr_log_view.xml',
-                   'data/res.certificate.server.csv'
+                   'data/res.certificate.server.csv',
+                   ## DEMO DATA - dodao nekoliko partnera za test
+                   'demo/res.partner.csv',          #dodajem partnere
+                   'demo/demo_certifikat_Z3.xml',    # dodajem Z3 Demo cert
+                   'demo/res_company.xml',
+                   ##testing only
+                   'test.xml'
                    ],
-    "demo" : [],
+    "demo" : [
+              
+              ],
     'test' : [],
     "active": False,
     "installable": True,
