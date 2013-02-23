@@ -11,12 +11,20 @@ from M2Crypto import RSA
 
 keyFile = 'openerp/addons/l10n_hr_fiskal/kljuc.pem'
 certFile = 'openerp/addons/l10n_hr_fiskal/cert.pem'
+## ovo bi isto učitao iz baze, polja su psremna samo trebam izvadit van..  zasada ovvako---
 
-import logging
 
-logging.basicConfig(level=logging.INFO, filename='/var/log/fisk/fiskalizacija.log')
-logging.getLogger('suds.client').setLevel(logging.DEBUG)
-logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+
+
+#import logging
+
+#logging.basicConfig(level=logging.INFO, filename='/var/log/fisk/fiskalizacija.log')
+#logging.getLogger('suds.client').setLevel(logging.DEBUG)
+#logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+#
+#--> Loging isključio.. mozda ostaviti kasnije... ali sad trenutno netrebao.. 
+
+
 
 class DodajPotpis(MessagePlugin):
   def sending(self, context):
@@ -81,11 +89,13 @@ class DodajPotpis(MessagePlugin):
 ############################################################################################################################################
 
 class Fiskalizacija():
-    #wsdl = 'file:///home/bole/openerp/git/fiskalizacija/wsdl/FiskalizacijaService.wsdl' # Za test
-    wsdl = 'openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl' # Za test
-    wsdl = 'file:///media/documents/openerp/openerp-7.0-20130212-002145/openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl' # RADI !!!
-    ## TODO : read path, i zaljepi local path do fajla! ovak nema smisla
     
+    ## ovo mi ne dela...
+    #path=str(os.getcwd())
+    #path='file://'+ path
+    #wsdl = path+'openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl' # Za test
+    ## TODO : read path, i zaljepi local path do fajla! ovak nema smisla
+    wsdl = 'file:///media/documents/openerp/openerp-7.0-20130212-002145/openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl'
     client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
     #client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
     client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
@@ -109,4 +119,4 @@ class Fiskalizacija():
         return poruka
   
     def echo(self):
-        self.echo = self.client2.service.echo('testtttt')
+        self.echo = self.client2.service.echo('Ovo moze biti bolikoji teskt za test poruku')

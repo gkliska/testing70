@@ -26,7 +26,8 @@
 				<tree string="tree_string">
 					<field name="name" select="1" />
 					<field name="type" />
-					
+					<field name="timestamp"/>
+					<field name="time_obr"/>
 
 				</tree>
 			</field>

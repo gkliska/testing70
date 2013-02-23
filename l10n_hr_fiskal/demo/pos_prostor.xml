@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+       <record model="l10n_hr_fis_pprostor" id="DEMO1">
+            <field name="name">TEST1</field>
+            <field name="oznaka_pp">PJ1</field>
+            <field name="ulica">Moja Ulica</field>
+            <field name="kbr">2</field>
+       </record> 
+    
+    </data>
+</openerp>

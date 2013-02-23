@@ -39,8 +39,13 @@ Contributions: Hrvoje ThePython - Free Code!
 
 Description:
 TODO:
-    a lot of stuff...  send echo and recive/log reply will be considered succes fro stage 1.
 
+STAGE 1 DONE!
+v1.01    Gumb TEST šalje i dobiva jir
+            ako zeza!
+            potrebno popraviti path za wsdl u fiskal.py i učitati vrijednosti sa drugih polja.. 
+        
+        a lot of stuff...  send echo and recive/log reply will be considered succes for stage 1.
 v1.00    Dodane tablice pripadni views, 
          zasada dodijeljeni izbornici Postavke/Fiskalizacija:
             - l10n_hr_pprostor - podaci o poslovnim prostorima
@@ -60,7 +65,7 @@ Preduvjeti:
         libxmlsec1-dev
     i onda build/install pyxmlsec-0.3.2 ili pronaći neki prikladniji! 
 """,
-    "version" : "1.01",
+    "version" : "1.02",
     "author" : "DAJ MI 5",
     "category" : "Localisation/Croatia",
     "website": "http://www.dajmi5.com",
@@ -70,6 +75,8 @@ Preduvjeti:
                 'base_vat',
                 'l10n_hr'
                 ],
+    #'external_dependencies':{'python':['m2crypto','pyxmlsec'],
+    #                         'bin':'libxmlsec-dev'},
     'init_xml': [],
     'data': [
                    'view/l10n_hr_fiskal_view.xml',
@@ -79,7 +86,7 @@ Preduvjeti:
                    ## DEMO DATA - dodao nekoliko partnera za test
                    'demo/res.partner.csv',          #dodajem partnere
                    'demo/demo_certifikat_Z3.xml',    # dodajem Z3 Demo cert
-                   'demo/res_company.xml',
+                   'demo/res_company.xml', #za praznu bazu upiše naziv i oib.. 
                    ##testing only
                    'test.xml'
                    ],

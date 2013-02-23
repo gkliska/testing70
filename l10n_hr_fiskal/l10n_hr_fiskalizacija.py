@@ -72,7 +72,7 @@ class l10n_hr_fis_pprostor(osv.Model):
                  }
     
     ##################################################
-    ## ovo je samo test butonic, nije jos funkcionalan
+    ## ovo je samo test butonic, vrijednosti treba učitati iz tablica...
     ##################################################
         
     def button_test(self,cr,uid,ids,fields,context=None):
@@ -103,19 +103,27 @@ class l10n_hr_fis_pprostor(osv.Model):
         a.racun.NakDost = "false"  ##TODO rutina koja provjerava jel prvi puta ili ponovljeno sranje!
 
         a.izracunaj_zastitni_kod(tmptime)
-        #odgovor_string = a.posalji()
+        #odgovor_string = a.echo()  moze i ovo radi!
         odgovor_string=a.posalji()
         
         odgovor_array = odgovor_string[1]
-        # ... sad tu ima odgovor.Jir
-        jir = odgovor_array.Jir
+
+        ##ovo sam dodao samo da vidim vrijeme odaziva...
+        tstamp2=datetime.datetime.now()
+        vrijeme_obrade=tstamp2-tstamp
+        time_obr=str(vrijeme_obrade)
         
-        #odgovor= odgovor_string  
+        
+        # ... sad tu ima odgovor.Jir
+        jir ='JIR - '+ odgovor_array.Jir
+        
+        odgovor= odgovor_string  
         values={
-                'name':'IdPoruke',
+                'name':jir,
                 'type':'prostor',
-                'sadrzaj':jir, #odgovor,
-                'timestamp':tstamp 
+                'sadrzaj':odgovor,
+                'timestamp':tstamp, 
+                'time_obr':time_obr
                 }
         log_id=logs_obj.create(cr,uid,values,context=context)
         return log_id
@@ -135,6 +143,7 @@ class l10n_hr_log(osv.Model):
         'type': fields.selection (_get_log_type,'Log message Type'),
         'sadrzaj':fields.text('Message context'),
         'timestamp':fields.datetime('TimeStamp'),
+        'time_obr':fields.char('Time for response',size=16,help='Vrijeme obrade podataka'), #vrijeme obrade prmljeno_vrijeme-poslano_vrijem
         'l10n_hr_fis_pprostor_id':fields.many2one('l10n_hr_fis_pprostor','l10n_hr_fis_pprostor_log_id','Prostor'),
         'res_users_id':fields.many2one('res.users','res_users_id','User') ## ovo cak i netreba obzirom na create i write uide !! 
         }
@@ -143,44 +152,3 @@ l10n_hr_log()
 
 
 
-### ovo čak i iz drugog modula moze ... ali zasad odavde..
-#from fiskal import *
-
-##tmp import
-
-def idem_probat ():
-    a = Fiskalizacija()
-    a.t = time.localtime()
-    tmptime  = '%d.%02d.%02d %02d:%02d:%02d' % (a.t.tm_mday, a.t.tm_mon, a.t.tm_year, a.t.tm_hour, a.t.tm_min, a.t.tm_sec)
-    a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (a.t.tm_mday, a.t.tm_mon, a.t.tm_year, a.t.tm_hour, a.t.tm_min, a.t.tm_sec)
-
-    a.zaglavlje.IdPoruke = str(uuid.uuid4())  ## HELP NEDDED ... kak uzeti i koji uzeti.. molim primjer
-  
-    a.racun.Oib = "57699704120" #ucitaj ! OIB korisnika
-    a.racun.USustPdv = 'true'  ## sustav_pdv
-    a.racun.DatVrijeme = a.zaglavlje.DatumVrijeme 
-    a.racun.OznSlijed = 'P' ## sljed_racuna
-    a.racun.BrRac.BrOznRac = '1'
-    a.racun.BrRac.OznPosPr = 'TESTIRAMO' ## name !! pazi !! nesmije imati razmake u nazivu.. prije sljanaj replace ' '->'' !!!
-    a.racun.BrRac.OznNapUr = '12'  ## oznaka_pp
-
-## ovo uzeti kasnije ... kad proradi echo     
-    a.porez = a.client2.factory.create('tns:Porez')
-    a.porez.Stopa = "25.00"
-    a.porez.Osnovica = "100.00"
-    a.porez.Iznos = "25.00"
-
-    a.racun.Pdv.Porez.append(a.porez)
-
-    a.racun.IznosUkupno = "125.00" # 
-    a.racun.NacinPlac = "G" # Nacin placanja
-    a.racun.OibOper = "57699704120"
-    a.racun.NakDost = "false"  ##TODO rutina koja provjerava jel prvi puta ili ponovljeno sranje!
-
-    a.izracunaj_zastitni_kod(tmptime)
-    odgovor_string = a.posalji()
-    odgovor_array = odgovor_string[1]
-
-    # ... sad tu ima odgovor.Jir
-    jir = odgovor_array.Jir
-    return jir
