@@ -16,11 +16,11 @@ certFile = 'openerp/addons/l10n_hr_fiskal/cert.pem'
 
 
 
-#import logging
+import logging
 
-#logging.basicConfig(level=logging.INFO, filename='/var/log/fisk/fiskalizacija.log')
-#logging.getLogger('suds.client').setLevel(logging.DEBUG)
-#logging.getLogger('suds.transport').setLevel(logging.DEBUG)
+logging.basicConfig(level=logging.INFO, filename='/var/log/fisk/fiskalizacija.log')
+logging.getLogger('suds.client').setLevel(logging.DEBUG)
+logging.getLogger('suds.transport').setLevel(logging.DEBUG)
 #
 #--> Loging isključio.. mozda ostaviti kasnije... ali sad trenutno netrebao.. 
 
@@ -87,7 +87,21 @@ class DodajPotpis(MessagePlugin):
     return context
 
 ############################################################################################################################################
-
+class PrijavaProstora():
+    wsdl = 'file:///media/documents/openerp/openerp-7.0-20130212-002145/openerp/addons/l10n_hr_fiskal/wsdl/FiskalizacijaService.wsdl'
+    client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
+    client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
+    zaglavlje = client2.factory.create('tns:Zaglavlje')
+    
+    def posalji(self):
+        odgovor=client2.service.poslovniProstor(zaglavlje, self.pp)
+        poruka_zahtjev =  client2.last_sent().str()
+        poruka_odgovor = str(odgovor)
+        http_status = odgovor[0]
+        return http_status
+        
+        
+        
 class Fiskalizacija():
     
     ## ovo mi ne dela...
@@ -99,10 +113,9 @@ class Fiskalizacija():
     client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
     #client2 = Client(wsdl, prettyxml=True, timeout=3, plugins=[DodajPotpis()]) 
     client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
-
-    racun = client2.factory.create('tns:Racun')
     zaglavlje = client2.factory.create('tns:Zaglavlje')
-
+    racun = client2.factory.create('tns:Racun')
+    
     def izracunaj_zastitni_kod(self, datumvrijeme):    
         medjurezultat = self.racun.Oib + str(datumvrijeme) + str(self.racun.BrRac.BrOznRac) + self.racun.BrRac.OznPosPr + self.racun.BrRac.OznNapUr + str(self.racun.IznosUkupno)
         pkey = RSA.load_key(keyFile)
@@ -119,4 +132,11 @@ class Fiskalizacija():
         return poruka
   
     def echo(self):
-        self.echo = self.client2.service.echo('Ovo moze biti bolikoji teskt za test poruku')
+        #self.echo = self.client2.service.echo('Ovo moze biti bolikoji teskt za test poruku')
+        try:
+            pingtest=self.client2.service.echo('TEST PORUKICA')
+            return pingtest
+        except:
+            return 'ERROR SEND ECHO'
+        #if(self.client2.service.echo('OK') == 'OK'): return True
+        

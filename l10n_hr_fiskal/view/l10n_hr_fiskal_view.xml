@@ -8,7 +8,9 @@
 			<field name="arch" type="xml">
 				<form string="Fiskalizacija" version="7.0">
 					<header>
-					   <button name="button_test" string="TEST" type="object" />
+					   <button name="button_test_echo" string="TEST ECHO" type="object" />
+					   <button name="button_test_racun" string="TEST RAČUN FIXDATA" type="object" />
+					   <button name="button_test_prostor" string="TEST PRIJAVA PROSTORA" type="object" />
 					</header>
 					
 					<sheet>

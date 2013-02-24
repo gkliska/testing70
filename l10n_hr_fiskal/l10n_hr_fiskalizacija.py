@@ -74,8 +74,77 @@ class l10n_hr_fis_pprostor(osv.Model):
     ##################################################
     ## ovo je samo test butonic, vrijednosti treba učitati iz tablica...
     ##################################################
+    def button_test_echo(self,cr,uid,ids,fields,context=None):
+        logs_obj=self.pool.get('l10n.hr.log')
+        a = Fiskalizacija()
+        tstamp = datetime.datetime.now()
+        tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        odgovor = a.echo()
         
-    def button_test(self,cr,uid,ids,fields,context=None):
+        tstamp2=datetime.datetime.now()
+        vrijeme_obrade=tstamp2-tstamp
+        time_obr='%s.%s s'%(vrijeme_obrade.seconds, vrijeme_obrade.microseconds)
+        name=str(uuid.uuid4())
+                
+        values={
+                'name':name,
+                'type':'echo',
+                'sadrzaj':odgovor,
+                'timestamp':tstamp, 
+                'time_obr':time_obr
+                }
+        log_id=logs_obj.create(cr,uid,values,context=context)
+        return log_id
+    
+    
+    def button_test_prostor(self,cr,uid,values,context=None):
+        a = PrijavaProstora()
+        tstamp = datetime.datetime.now()
+        a.t = tstamp
+        tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        a.zaglavlje.IdPoruke = str(uuid.uuid4())
+        
+        
+        a.pp.Oib='57699704120'
+        a.pp.OznPoslProstora='PJ1'
+        a.pp.RadnoVrijeme='pon-pet 7-23'
+        a.pp.DatumPocetkaPrimjene='08.02.2013'
+        a.pp.SpecNamj ='57699704120'
+        
+        
+        a.pp.adresa = a.pp.client2.factory.create('tns:Adresa')
+        a.pp.adresni_podatak = a.pp.client2.factory.create('tns:AdresniPodatakType')
+        
+        a.pp.adresa.Ulica='Diogneševa'
+        a.pp.adresa.KucniBroj='8'
+        a.pp.adresa.BrojPoste='10020'
+        a.pp.adresa.Naselje='Botinec'
+        a.pp.adresa.Opcina='Novi Zagreb'
+        
+           
+        a.pp.AdresniPodatak=a.pp.adresni_podatak
+        a.pp.AdresniPodatak.Adresa=a.pp.adresa
+        a.pp.poslovniProstorType=a.pp.AdresniPodatak
+        
+        a.pp.__delattr__('OznakaZatvaranja') ##hmhmmm
+        
+        #a.pp.AdresniPodatak=adresni_podatak
+        
+        odgovor = a.posalji()
+        
+        values={
+                'name':jir,
+                'type':'prostor',
+                'sadrzaj':odgovor,
+                'timestamp':tstamp, 
+                'time_obr':time_obr
+                }
+        log_id=logs_obj.create(cr,uid,values,context=context)
+        return log_id
+        
+        
+    def button_test_racun(self,cr,uid,ids,fields,context=None):
         logs_obj=self.pool.get('l10n.hr.log')
         
         a = Fiskalizacija()
@@ -105,22 +174,21 @@ class l10n_hr_fis_pprostor(osv.Model):
         a.izracunaj_zastitni_kod(tmptime)
         #odgovor_string = a.echo()  moze i ovo radi!
         odgovor_string=a.posalji()
-        
         odgovor_array = odgovor_string[1]
-
+        # ... sad tu ima odgovor.Jir
+        
+        jir ='JIR - '+ odgovor_array.Jir
+        
         ##ovo sam dodao samo da vidim vrijeme odaziva...
         tstamp2=datetime.datetime.now()
         vrijeme_obrade=tstamp2-tstamp
-        time_obr=str(vrijeme_obrade)
-        
-        
-        # ... sad tu ima odgovor.Jir
-        jir ='JIR - '+ odgovor_array.Jir
+        time_obr='%s.%s s'%(vrijeme_obrade.seconds, vrijeme_obrade.microseconds)
+        ################################################
         
         odgovor= odgovor_string  
         values={
                 'name':jir,
-                'type':'prostor',
+                'type':'racun',
                 'sadrzaj':odgovor,
                 'timestamp':tstamp, 
                 'time_obr':time_obr
