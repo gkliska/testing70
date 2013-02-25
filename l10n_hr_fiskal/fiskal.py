@@ -92,16 +92,21 @@ class PrijavaProstora():
     client2 = Client(wsdl, cache=None, prettyxml=True, timeout=15, faults=False, plugins=[DodajPotpis()]) 
     client2.add_prefix('tns', 'http://www.apis-it.hr/fin/2012/types/f73')
     zaglavlje = client2.factory.create('tns:Zaglavlje')
-    
+    pp = client2.factory.create('tns:PoslovniProstor')
+    #adresni_podatak = client2.factory.create('tns:AdresniPodatak')
     def posalji(self):
-        odgovor=client2.service.poslovniProstor(zaglavlje, self.pp)
-        poruka_zahtjev =  client2.last_sent().str()
+        odgovor=self.client2.service.poslovniProstor(self.zaglavlje, self.pp)
+        poruka_zahtjev =  self.client2.last_sent().str()
         poruka_odgovor = str(odgovor)
-        http_status = odgovor[0]
-        return http_status
+        return poruka_odgovor
+        #http_status = odgovor[0]
+        #return http_status
         
         
-        
+
+class DatumVrijeme():
+    pass
+
 class Fiskalizacija():
     
     ## ovo mi ne dela...

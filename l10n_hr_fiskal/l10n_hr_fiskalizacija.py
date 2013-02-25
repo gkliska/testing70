@@ -98,59 +98,74 @@ class l10n_hr_fis_pprostor(osv.Model):
     
     
     def button_test_prostor(self,cr,uid,values,context=None):
+        
+        
         a = PrijavaProstora()
         tstamp = datetime.datetime.now()
         a.t = tstamp
         tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        
+        
+        
+        
         a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
         a.zaglavlje.IdPoruke = str(uuid.uuid4())
         
-        
+        a.pp = a.client2.factory.create('tns:PoslovniProstor') #ovog napravi ovako.. 
         a.pp.Oib='57699704120'
         a.pp.OznPoslProstora='PJ1'
         a.pp.RadnoVrijeme='pon-pet 7-23'
         a.pp.DatumPocetkaPrimjene='08.02.2013'
         a.pp.SpecNamj ='57699704120'
         
+        adresni_podatak = a.client2.factory.create('tns:AdresniPodatakType')
         
-        a.pp.adresa = a.pp.client2.factory.create('tns:Adresa')
-        a.pp.adresni_podatak = a.pp.client2.factory.create('tns:AdresniPodatakType')
+        adresa = a.client2.factory.create('tns:Adresa')
+        #a.pp.adresni_podatak = a.client2.factory.create('tns:AdresniPodatakType')
         
-        a.pp.adresa.Ulica='Diogneševa'
-        a.pp.adresa.KucniBroj='8'
-        a.pp.adresa.BrojPoste='10020'
-        a.pp.adresa.Naselje='Botinec'
-        a.pp.adresa.Opcina='Novi Zagreb'
+        adresa.Ulica='Diogneševa'
+        adresa.KucniBroj='8'
+        adresa.BrojPoste='10020'
+        adresa.Naselje='Botinec'
+        adresa.Opcina='Novi Zagreb'
         
+        adresni_podatak.Adresa = adresa
            
-        a.pp.AdresniPodatak=a.pp.adresni_podatak
-        a.pp.AdresniPodatak.Adresa=a.pp.adresa
-        a.pp.poslovniProstorType=a.pp.AdresniPodatak
+        #a.pp.AdresniPodatak=adresni_podatak
+        a.pp.AdresniPodatak = adresni_podatak
+        #a.pp.poslovniProstorType=a.pp.AdresniPodatak
         
         a.pp.__delattr__('OznakaZatvaranja') ##hmhmmm
         
         #a.pp.AdresniPodatak=adresni_podatak
-        
+        tstamp2=datetime.datetime.now()
+        vrijeme_obrade=tstamp2-tstamp
+        time_obr='%s.%s s'%(vrijeme_obrade.seconds, vrijeme_obrade.microseconds)
         odgovor = a.posalji()
-        
+        uuu=uuid.uuid4()
         values={
-                'name':jir,
+                'name':uuu,
                 'type':'prostor',
                 'sadrzaj':odgovor,
                 'timestamp':tstamp, 
                 'time_obr':time_obr
                 }
+        logs_obj=self.pool.get('l10n.hr.log')
         log_id=logs_obj.create(cr,uid,values,context=context)
         return log_id
         
-        
+    
+    
     def button_test_racun(self,cr,uid,ids,fields,context=None):
         logs_obj=self.pool.get('l10n.hr.log')
         
         a = Fiskalizacija()
         tstamp = datetime.datetime.now()
-        a.t = tstamp
         tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        
+        
+        
+        a.t = tstamp
         a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
         a.zaglavlje.IdPoruke = str(uuid.uuid4())
         a.racun.Oib = "57699704120" #ucitaj ! OIB korisnika
