@@ -31,25 +31,38 @@ from openerp.osv import fields,osv
 class test_table(osv.Model):
     _name = 'testtable'
     _description ='Testing purposes table - to be removed'
-    
     def dummy(self):
         pass   
     
-    def _neka_suma(self,cr,uid,ids,field,arg,context=None):
-        tra=self.read(cr, uid, fields, context=None)
-        res=tra.br1 + tra.br2
-        return {'suma':res
-                }
-
-
-
-    def promjena1(self,cr,uid,ids,br1,br2,context=None):
-        a=br1+br2
-        b=str(br1)+str(br2)
-        return{'br2':a,
-               'test1':b}
+    
+    
+    def promjena1 (self,cr,uid,id,fields,context=None):
+        fields=['name','br1','br2']
+        #učitam da odabrana polja 
+        x_polja=self.read(cr,uid,id,fields,context=None)
+        #uzmem prvu vrijenost
+        xp=x_polja[0]
+        x_naziv=xp['name']
+        x_br1=xp['br1']
+        x_br2=xp['br2']
         
+        r_test1=x_br1*x_br1
+        r_test2=x_naziv + '-' + str(x_br1)
         
+        w_polja={'test1':r_test1,
+                 'test2':r_test2}
+        w_polja=self.write(cr,uid,id,w_polja)
+        return w_polja
+    def _neka_suma (self,cr,uid,id ,fields,arg,context=None):
+        fields=['br1','br2']
+        broj1=self.read(cr,uid,id,fields)[0]['br1']
+        broj2=self.read(cr,uid,id,fields)[0]['br2']
+        suma_br=broj1+broj2
+        print suma_br
+        pass
+        vrati=self.write(cr,uid,id,{'suma':suma_br})
+        return vrati
+    
     _columns={
               'name':fields.char('name', size=25),
               'br1':fields.integer('BR1'),
@@ -57,5 +70,5 @@ class test_table(osv.Model):
               'test1':fields.char('test1',size=25),
               'test2':fields.char('test2',size=125),
               'dane':fields.boolean('DaNe'),
-              #'suma':fields.function(_neka_suma,string='test sume',type='integer')
+              'suma':fields.function(_neka_suma,string='test sume',type='integer')
               }

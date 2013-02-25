@@ -32,6 +32,17 @@ import uuid
 from fiskal import *
 
 
+def vrijeme(self):
+        tstamp=datetime.datetime.now()
+        v_date='%s.%s.%s' % (tstamp.day, tstamp.month, tstamp.year)
+        v_datum_vrijeme='%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        v_datum_racun='%d.%02d.%02d ; %02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        vrijeme={'datum':v_date,
+                 'datum_vrijeme':v_datum_vrijeme,
+                 'datum_racun':v_datum_racun,
+                 'time_stamp':tstamp}
+        return vrijeme
+
 class l10n_hr_fis_pprostor(osv.Model):
     
     _name = 'l10n_hr_fis_pprostor'
@@ -43,7 +54,9 @@ class l10n_hr_fis_pprostor(osv.Model):
  #       return [(r['model'],r['name']) for r in res] + [('','')]
     
     _columns = {
-        'name': fields.char('Naziv poslovnog prostora', size=128 ,readonly="0"),
+        'name': fields.char('Naziv poslovnog prostora', size=128 ,readonly="0", select=1),
+        'res_partner_id':fields.many2one('res.partner','res_partner_id','For Company'),
+        #'res_partner':fields.property('res.partner',type='many2one'relation='res.partners')
         'oznaka_pp': fields.char('Oznaka poslovnog prostora', required="True", size=32),
         'datum_primjene': fields.datetime('Datum', help ="Datum od kojeg vrijede navedeni podaci"),
         'ulica': fields.char('Ulica', size=100),
@@ -63,14 +76,13 @@ class l10n_hr_fis_pprostor(osv.Model):
         # e tu bi dodao subform komunikacija i učitao tablicu komunikacije
         'log_ids':fields.one2many('l10n_hr_log','l10n_hr_fis_pprostor_id','Session')
                 }
-    
-    
-    
-    
     _defaults = {
+                 'res_partner_id':'1',
                  'sustav_pdv':"True"
                  }
-    
+    _constraints={
+                  
+                  }
     ##################################################
     ## ovo je samo test butonic, vrijednosti treba učitati iz tablica...
     ##################################################
@@ -97,62 +109,68 @@ class l10n_hr_fis_pprostor(osv.Model):
         return log_id
     
     
-    def button_test_prostor(self,cr,uid,values,context=None):
+    
         
         
+    def button_test_prostor(self,cr,uid,id,fields,context=None):
+        
+        polja_pprostor=['name','datum_primjene','oznaka_pp','radno_vrijeme',
+                        'ulica','kbr','kbr_dodatak','posta','naselje','opcina',
+                        'sustav_pdv','sljed_racuna','spec' ]
+        
+        prostor=self.pool.get('l10n_hr_fis_pprostor').read(cr,uid,id,polja_pprostor)[0]
+        
+        #### start data processing
+        start_time=vrijeme(self)
+        
+        #date_valid=
+        if not prostor['datum_primjene']:
+            ##ak nema datum unešen uzmi danas!
+            datum_danas=start_time['datum']
+        else : datum_danas = prostor['datum_primjene']
+                  
         a = PrijavaProstora()
-        tstamp = datetime.datetime.now()
-        a.t = tstamp
-        tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
-        
-        
-        
-        
-        a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        ##prvo punim zaglavlje
+        a.t = start_time['datum']  # mislim da ovdje ide today ako je Zatvaranje !!!
+        a.zaglavlje.DatumVrijeme = start_time['datum_vrijeme']
         a.zaglavlje.IdPoruke = str(uuid.uuid4())
         
+        ## podaci o pos prostoru
         a.pp = a.client2.factory.create('tns:PoslovniProstor') #ovog napravi ovako.. 
         a.pp.Oib='57699704120'
-        a.pp.OznPoslProstora='PJ1'
-        a.pp.RadnoVrijeme='pon-pet 7-23'
-        a.pp.DatumPocetkaPrimjene='08.02.2013'
-        a.pp.SpecNamj ='57699704120'
+        a.pp.OznPoslProstora=prostor['oznaka_pp']
+        a.pp.RadnoVrijeme=prostor['radno_vrijeme']
+        a.pp.DatumPocetkaPrimjene='08.02.2013' #datum_danas   e ak ovo stavim baci gresku.. treba dodat raise ili nekaj!!!
+        a.pp.SpecNamj =prostor['spec']  #57699704120'
         
         adresni_podatak = a.client2.factory.create('tns:AdresniPodatakType')
-        
         adresa = a.client2.factory.create('tns:Adresa')
-        #a.pp.adresni_podatak = a.client2.factory.create('tns:AdresniPodatakType')
         
-        adresa.Ulica='Diogneševa'
-        adresa.KucniBroj='8'
-        adresa.BrojPoste='10020'
-        adresa.Naselje='Botinec'
-        adresa.Opcina='Novi Zagreb'
+        adresa.Ulica='Diogneševa' #prostor['ulica']  #'Diogneševa'
+        adresa.KucniBroj='8' # prostor['kbr']  #'8'
+        adresa.BrojPoste='10020' #prostor['posta']  #'10020'
+        adresa.Naselje='Botinec' #prostor['naselje']  #'Botinec'
+        adresa.Opcina='N.Zagreb' # prostor['opcina']  #'Novi Zagreb'
         
         adresni_podatak.Adresa = adresa
-           
-        #a.pp.AdresniPodatak=adresni_podatak
         a.pp.AdresniPodatak = adresni_podatak
-        #a.pp.poslovniProstorType=a.pp.AdresniPodatak
+        a.pp.__delattr__('OznakaZatvaranja') ##hmhmmm i ovo treba paziti kak sa time! jer mora jednom imati i opciju zatvaranja!
         
-        a.pp.__delattr__('OznakaZatvaranja') ##hmhmmm
-        
-        #a.pp.AdresniPodatak=adresni_podatak
-        tstamp2=datetime.datetime.now()
-        vrijeme_obrade=tstamp2-tstamp
-        time_obr='%s.%s s'%(vrijeme_obrade.seconds, vrijeme_obrade.microseconds)
         odgovor = a.posalji()
         uuu=uuid.uuid4()
+        stop_time=vrijeme(self)
+        t_obrada=stop_time['time_stamp']-start_time['time_stamp']
+        time_ob='%s.%s s'%(t_obrada.seconds, t_obrada.microseconds)
+        
         values={
                 'name':uuu,
                 'type':'prostor',
                 'sadrzaj':odgovor,
-                'timestamp':tstamp, 
-                'time_obr':time_obr
+                'timestamp':stop_time['time_stamp'], 
+                'time_obr':time_ob
                 }
-        logs_obj=self.pool.get('l10n.hr.log')
-        log_id=logs_obj.create(cr,uid,values,context=context)
-        return log_id
+        
+        return self.pool.get('l10n.hr.log').create(cr,uid,values,context=context) #log_id
         
     
     

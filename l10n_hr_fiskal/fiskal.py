@@ -98,6 +98,7 @@ class PrijavaProstora():
         odgovor=self.client2.service.poslovniProstor(self.zaglavlje, self.pp)
         poruka_zahtjev =  self.client2.last_sent().str()
         poruka_odgovor = str(odgovor)
+        pass #TODO upakirati zahjtev i odgovor pa psle raskopati i spremiti u bazu!
         return poruka_odgovor
         #http_status = odgovor[0]
         #return http_status

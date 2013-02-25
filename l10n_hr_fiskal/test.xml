@@ -34,7 +34,7 @@
 						<field name="test1" />
 						<field name="test2" />
 						<field name="dane" />
-						<!--  field name="suma"/-->
+						<field name="suma"/>
 					</group>
 				</form>
 			</field>
