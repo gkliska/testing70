@@ -35,19 +35,23 @@ class test_table(osv.Model):
         pass   
     
     
-    
+    ####ovo dela"#####
+    #####################################################
     def promjena1 (self,cr,uid,id,fields,context=None):
         fields=['name','br1','br2']
         #učitam da odabrana polja 
         x_polja=self.read(cr,uid,id,fields,context=None)
+        if not x_polja : 
+            print 'nema polja'
+            return False
         #uzmem prvu vrijenost
-        xp=x_polja[0]
+        xp=x_polja[0] #i onda iz nje čupam polja 
         x_naziv=xp['name']
         x_br1=xp['br1']
         x_br2=xp['br2']
         
         r_test1=x_br1*x_br1
-        r_test2=x_naziv + '-' + str(x_br1)
+        r_test2=x_naziv + '-' + str(x_br1) + ' - ' + str(x_br2)
         
         w_polja={'test1':r_test1,
                  'test2':r_test2}
@@ -62,6 +66,9 @@ class test_table(osv.Model):
         pass
         vrati=self.write(cr,uid,id,{'suma':suma_br})
         return vrati
+    ############################################################
+    #############################################################
+    
     
     _columns={
               'name':fields.char('name', size=25),
@@ -70,5 +77,11 @@ class test_table(osv.Model):
               'test1':fields.char('test1',size=25),
               'test2':fields.char('test2',size=125),
               'dane':fields.boolean('DaNe'),
-              'suma':fields.function(_neka_suma,string='test sume',type='integer')
+              #'suma':fields.function(_neka_suma,string='test sume',type='integer')
               }
+    
+    
+    def zemi_podatke(self,cr, uid,ids,fields,arg,context=None):
+        main_partner=self.pool.get('res.partners')
+        print len(main_partner)
+        return True

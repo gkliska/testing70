@@ -8,14 +8,18 @@
 			<field name="arch" type="xml">
 				<form string="Fiskalizacija" version="7.0">
 					<header>
-					   <button name="button_test_echo" string="TEST ECHO" type="object" />
-					   <button name="button_test_racun" string="TEST RAČUN FIXDATA" type="object" />
-					   <button name="button_test_prostor" string="TEST PRIJAVA PROSTORA" type="object" />
+						<button name="button_test_echo" string="TEST ECHO" type="object" />
+						<button name="button_test_racun" string="TEST RAČUN FIXDATA"
+							type="object" />
+						<button name="button_test_prostor" string="TEST PRIJAVA PROSTORA"
+							type="object" />
 					</header>
-					
+
 					<sheet>
 						<separator string="PRIJAVA POSLOVNOG PROSTORA U POREZNU UPRAVU" />
 						<group>
+							<field name='res_partner_id' string="Naziv organizacije"/>
+							<field name='datum_primjene'/>
 							<field name="name" readonly="False" />
 							<field name="oznaka_pp" placeholder="PJ1 ili u skladu sa pravilnikom" />
 							<newline />
@@ -49,27 +53,18 @@
 								</group>
 							</page>
 							<page string="KOMUNIKACIJA">
-								<!-- field name='log_ids' nolabel="1" >
-								    <tree>
-								        <field name="name"/>
-								        <field name="sadrzaj"/>
-								        <field name="type"/>
-								    </tree>
-								</field> -->
+								<!-- field name='log_ids' nolabel="1" > <tree> <field name="name"/> 
+									<field name="sadrzaj"/> <field name="type"/> </tree> </field> -->
 								<!-- TODO: Dodati subform sa popisom pokušaja komunikacije -->
 								<!-- field name="l10n_hr_log_ids" context="{'form_view_ref': 'l10n_hr_log_tree'}" 
 									modifiers="{}"/ -->
 								<!-- button name="test" string="Test veze ECHO metodom" type="object" 
 									class="oe_highlight" / -->
-								
+
 							</page>
 							<page string="TESTING">
-							 <!-- field name="log_ids" nolabel="1" colspan="4" mode="tree">
-							     <tree string="LOGOVI">
-							         <field name="name"/>
-							         <field name="log_id"  />
-							     </tree>
-							  </field-->
+								<!-- field name="log_ids" nolabel="1" colspan="4" mode="tree"> <tree 
+									string="LOGOVI"> <field name="name"/> <field name="log_id" /> </tree> </field -->
 							</page>
 						</notebook>
 					</sheet>
@@ -83,7 +78,7 @@
 			<field name="model">l10n_hr_fis_pprostor</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-			     
+
 				<tree string="Fiskalizacija poslovnog prostora">
 					<field name="name" />
 					<field name="oznaka_pp" />

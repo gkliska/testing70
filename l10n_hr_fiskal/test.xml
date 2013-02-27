@@ -23,7 +23,7 @@
 				<form string="form_string" version="7.0">
 					<header>
 						<button name="promjena1" string="TEST1" type="object" />
-						<button name="dummy" string="TEST2" type="object" class="oe_highlight" />
+						<button name="zemi_podatake" string="TEST2" type="object" class="oe_highlight" />
 						<!-- button name="dummy" string="TEST1" type="object" invisible="True" 
 							/ -->
 					</header>
@@ -34,7 +34,9 @@
 						<field name="test1" />
 						<field name="test2" />
 						<field name="dane" />
+						<!-- 
 						<field name="suma"/>
+						 -->
 					</group>
 				</form>
 			</field>
