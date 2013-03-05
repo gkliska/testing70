@@ -92,11 +92,10 @@ class account_invoice(osv.Model):
         a.racun.BrRac.OznNapUr = '1'  ## nisam siguran odkud ovo da zvadim pa ostavim zasada 1!!!
         a.porez = a.client2.factory.create('tns:Porez')
         
-        
+        pdv="false"
         if invoice.pprostor_id.sustav_pdv:
             pdv="true"
-        else:
-            pdv="false"
+                    
         a.racun.USustPdv = pdv #'true'  ## sustav_pdv
         poslao = poslao + "U sustavu PDV : " + pdv + "\n" 
         ### TODO : zbrojiti sve pojedine poreze i grupirati i kaj ako nije u sustavu pdv?
@@ -117,7 +116,7 @@ class account_invoice(osv.Model):
         if not invoice.user_id.vat: 
             zk=self.write(cr,uid,id,{'zki':'Ovaj korisnik nema unešen OIB! izdavanje ZKI nije moguće'})
             return
-        a.racun.OibOper = invoice.user_id.vat[2:] #"57699704120"
+        else:  a.racun.OibOper = invoice.user_id.vat[2:] #"57699704120"
         ## PAZI : ne dozvoliti dalje ako nije unešen OIB operatera!
         if not invoice.zki:
             a.racun.NakDost = "false"  ##TODO rutina koja provjerava jel prvi puta ili ponovljeno sranje!
@@ -136,6 +135,7 @@ class account_invoice(osv.Model):
         if odgovor_array==500 : 
             g = odgovor_string[1]
             odgovor= g.Greske.Greska
+            zk=self.write(cr,uid,id,{'jir':'došlo je do greške!'})
             pass
         else :
             b=odgovor_string[1]
