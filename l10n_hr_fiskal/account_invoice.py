@@ -114,7 +114,9 @@ class account_invoice(osv.Model):
         
         a.racun.NacinPlac = invoice.nac_plac
         poslao = poslao + "Način Plaćanja : " + invoice.nac_plac + "\n"
-        
+        if not invoice.user_id.vat: 
+            zk=self.write(cr,uid,id,{'zki':'Ovaj korisnik nema unešen OIB! izdavanje ZKI nije moguće'})
+            return
         a.racun.OibOper = invoice.user_id.vat[2:] #"57699704120"
         ## PAZI : ne dozvoliti dalje ako nije unešen OIB operatera!
         if not invoice.zki:
