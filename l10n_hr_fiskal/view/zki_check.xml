@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="l10n_hr_check_zki_form_view">
+            <field name="name">l10n_hr_check_zki_form</field>
+            <field name="model">l10n.hr.check.zki</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="GENERIRANJE ZKI">
+                    <group colspan="4" col="2">
+                        <field name="name" />
+                        <field name="datum" />
+                        <field name="broj_rac" />
+                        <field name="oib" />
+                        <field name="iznos" />
+
+                        <!-- button name="button_set_user" , string="UserSET", type="object"/ -->
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="l10n_hr_check_zki_tree_view">
+            <field name="name">l10n_hr_check_zki_tree</field>
+            <field name="model">l10n.hr.check.zki</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="tree_string">
+                    <field name="name" select="1" />
+                    <field name="zki" />
+                    <field name="broj_rac" />
+
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="l10n_hr_check_zki_action1">
+            <field name="name">l10n_hr_check_zki_tree</field>
+            <field name="res_model">l10n.hr.check.zki</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+
+
+        </record>
+
+        <menuitem id="menu_fiskal_4" name="ReGeneriranje ZKI"
+            action="l10n_hr_check_zki_action1" parent="menu_fiskal_1" />
+    </data>
+</openerp>

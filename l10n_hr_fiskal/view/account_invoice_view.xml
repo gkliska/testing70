@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="account_invoice_l10_n_hr_fiskal">
+			<field name="name">account.invoice.l10n.hr.fiskal</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<button name="invoice_print" position="after">
+                    <button name="button_fiscalize" string="Fiskaliziraj" states="open"
+                        type="object" groups="base.group_user" />
+				</button>
+
+				<field name="type" position="before">
+				    <group colspan="4">
+					<field name="zki" string="ZKI" readonly="True" states="open" />
+					<field name="jir" string="JIR" readonly="True" states="open"/>
+					</group>
+				</field>
+				<field name="journal_id" position="after">
+				    <field name="pprostor_id"/>
+				    <field name="nac_plac"/>
+				</field>
+
+			</field>
+		</record>
+
+<!-- 
+		<record model="ir.ui.view" id="account_invoice_supplier_form_onchange_fiscal_position">
+			<field name="name">account.invoice.form.onchange.fiscal.position</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form"/>
+			<field name="arch" type="xml">
+				<field name="fiscal_position" position="after">
+                    <button name="button_change_fiscal_position" states="draft" string="Change" 
+                        type="object" groups="base.group_user" icon="terp-stock_effects-object-colorize"/>
+				</field>
+
+                <field name="date_invoice" position="before">
+                    <field name="date_delivery" />
+                </field>
+
+                <field name="date_due" position="after">
+                    <field name="check_total" />
+                </field>
+				
+
+			</field>
+		</record>
+		 -->
+<!--
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.vat.inherit.l10n_hr</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base_vat.res.partner.vat.inherit"/>
+            <field name="arch" type="xml">
+                <field name="vat_subjected" position="after">
+                    <group colspan="2" col="6">
+                        <field name="vat" on_change="vat_change(vat)"/>
+                        <button name="button_check_vat" string="Check VAT" type="object" icon="gtk-execute"/>
+                        <field name="vat_subjected" colspan="1" groups="base.group_extended" />
+                    </group>
+                </field>
+            </field>
+        </record>
+-->
+
+
+	</data>
+
+</openerp>
