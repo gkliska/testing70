@@ -39,6 +39,16 @@ Contributions: Hrvoje ThePython - Free Code!
 
 Description:
 TODO:
+STAGE2 : napomene
+    Propisati će se izgled broja računa kako se DA 
+    treba ispisivati na fizičkom računu u 
+    sljedećem obliku: 
+    Račun
+    brojčana oznaka računa/oznaka poslovnog prostora/oznaka naplatnog uređaja
+    Primjer: 1234567890/POSL1/12
+    
+    PREGLEDATI BROJEVNI KRUG ZA IRA!
+
 
 STAGE 1 DONE!
 v1.01    Gumb TEST šalje i dobiva jir
@@ -73,7 +83,8 @@ Preduvjeti:
     'depends': [
                 'base',
                 'base_vat',
-                'l10n_hr'
+                'l10n_hr',
+                'l10n_hr_account'
                 ],
     #'external_dependencies':{'python':['m2crypto','pyxmlsec'],
     #                         'bin':'libxmlsec-dev'},
@@ -87,8 +98,10 @@ Preduvjeti:
                    'demo/res.partner.csv',          #dodajem partnere
                    'demo/demo_certifikat_Z3.xml',    # dodajem Z3 Demo cert
                    'demo/res_company.xml', #za praznu bazu upiše naziv i oib.. 
+                   'view/account_invoice_view.xml',
+                   'view/zki_check.xml'
                    ##testing only
-                   'test.xml'
+                   #'test.xml'
                    ],
     "demo" : [
               

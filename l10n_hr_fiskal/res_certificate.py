@@ -67,5 +67,6 @@ class res_certificate_server(osv.Model):
     _description="Servers for SOAP communication"
     _columns = {
         'name':fields.char('Name',size=128, help='Internal name', required=True),
-        'link':fields.char('Link',size=256,required=True)        
+        'link':fields.char('Link',size=256,required=True),
+        'wsdl':fields.text('WSDL')        
         }

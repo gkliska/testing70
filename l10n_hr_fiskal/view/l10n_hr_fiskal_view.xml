@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_form">
-			<field name="name">l10n_hr_fis_pprostor_form</field>
-			<field name="model">l10n_hr_fis_pprostor</field>
+		<record model="ir.ui.view" id="l10n_hr_pprostor_form">
+			<field name="name">l10n_hr_pprostor_form</field>
+			<field name="model">l10n.hr.pprostor</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Fiskalizacija" version="7.0">
@@ -19,7 +19,7 @@
 						<separator string="PRIJAVA POSLOVNOG PROSTORA U POREZNU UPRAVU" />
 						<group>
 							<field name='res_partner_id' string="Naziv organizacije"/>
-							<field name='datum_primjene'/>
+							<field name="datum_primjene" string = "Datum primjene"/>
 							<field name="name" readonly="False" />
 							<field name="oznaka_pp" placeholder="PJ1 ili u skladu sa pravilnikom" />
 							<newline />
@@ -35,6 +35,7 @@
 									</group>
 									<field name="posta" />
 									<field name="naselje" />
+									<field name="opcina" />
 								</group>
 
 							</page>
@@ -73,9 +74,9 @@
 			</field>
 		</record>
 
-		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_tree">
-			<field name="name">l10n_hr_fis_pprostor_tree</field>
-			<field name="model">l10n_hr_fis_pprostor</field>
+		<record model="ir.ui.view" id="l10n_hr_pprostor_tree">
+			<field name="name">l10n_hr_pprostor_tree</field>
+			<field name="model">l10n.hr.pprostor</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 
@@ -92,9 +93,9 @@
 		</record>
 
 		<!--############################ ## ## ACTIONS ADD ## ############################## -->
-		<record model="ir.actions.act_window" id="l10n_hr_fis_pprostor_action1">
-			<field name="name">l10n_hr_fis_pprostor_form</field>
-			<field name="res_model">l10n_hr_fis_pprostor</field>
+		<record model="ir.actions.act_window" id="l10n_hr_pprostor_action1">
+			<field name="name">l10n_hr_pprostor_form</field>
+			<field name="res_model">l10n.hr.pprostor</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 			<field name="help" type="html">
@@ -123,6 +124,6 @@
 		<menuitem id="menu_fiskal_1" name="Fiskalizacija" parent="base.menu_administration"
 			sequence="1" />
 		<menuitem id="menu_fiskal_2" name="Prijava Objekata"
-			action="l10n_hr_fis_pprostor_action1" parent="menu_fiskal_1" />
+			action="l10n_hr_pprostor_action1" parent="menu_fiskal_1" />
 	</data>
 </openerp>

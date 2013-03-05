@@ -5,7 +5,7 @@
 			<field name="name">Z3 Demo Certificate</field>
 			<field name="cert_type">fina_demo</field>
 			<field name="res_partner_id" ref="res_partner_4" />
-			<field name="cert_pass">12345</field>
+			<field name="cert_password">12345</field>
 			<field name="cert_key">-----BEGIN PRIVATE KEY-----
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQrU2UZ8cRgO3V
 3cfDlo8+F/msUpNOo23o8MFisReTtTq1icEzAhBa+apWZ2QQIFctwKfWBnCidwm8

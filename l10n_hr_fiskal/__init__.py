@@ -27,7 +27,9 @@
 
 import l10n_hr_fiskalizacija
 import res_certificate
-import TEST
+import account_invoice
+import zki_check
+#import TEST
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

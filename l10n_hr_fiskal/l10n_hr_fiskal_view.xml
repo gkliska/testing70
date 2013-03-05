@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
+	
+	
+	
+	<!--  ovo radi, forme i izbornici -->
 		<record model="ir.ui.view" id="l10n_hr_fis_pprostor_form">
 			<field name="name">l10n_hr_fis_pprostor_form</field>
 			<field name="model">l10n_hr_fis_pprostor</field>
@@ -21,6 +25,7 @@
 							<field name="kbr_dodatak" />
 							<field name="posta" />
 							<field name="naselje" />
+							
 						</group>
 						<group colspan="3">
 							<field name="radno_vrijeme" placeholder="npr: pon-pet 07:00-18:00 ili pon-pet 08:00-20:00, sub 08:14:00" />
@@ -49,6 +54,7 @@
 					<field name="kbr_dodatak" />
 					<field name="posta" />
 					<field name="naselje" />
+					
 				</tree>
 
 			</field>

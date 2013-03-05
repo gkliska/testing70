@@ -90,6 +90,7 @@
 				<form string="form_string">
 					<field name="name" select="1" />
 					<field name="link" />
+					<field name="wsdl" />
 				</form>
 			</field>
 		</record>

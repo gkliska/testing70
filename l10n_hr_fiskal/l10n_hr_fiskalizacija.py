@@ -27,25 +27,13 @@
 import logging
 from openerp.osv import fields, osv, orm
 import datetime
-##tmp iport fields
 import uuid
 from fiskal import *
 
 
-def vrijeme(self):
-        tstamp=datetime.datetime.now()
-        v_date='%s.%s.%s' % (tstamp.day, tstamp.month, tstamp.year)
-        v_datum_vrijeme='%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
-        v_datum_racun='%d.%02d.%02d ; %02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
-        vrijeme={'datum':v_date,
-                 'datum_vrijeme':v_datum_vrijeme,
-                 'datum_racun':v_datum_racun,
-                 'time_stamp':tstamp}
-        return vrijeme
-
-class l10n_hr_fis_pprostor(osv.Model):
+class l10n_hr_pprostor(osv.Model):
     
-    _name = 'l10n_hr_fis_pprostor'
+    _name = 'l10n.hr.pprostor'
     _description = 'Podaci o poslovnim prostorima'
     
  #   def _get_log_list(self,cr,uid,ids,field_names=None, arg=False, context=None):
@@ -64,17 +52,15 @@ class l10n_hr_fis_pprostor(osv.Model):
         'kbr_dodatak': fields.char('Dodatak kucnom broju', size=4),
         'posta': fields.char('Posta', size=12),
         'naselje': fields.char('Naselje', size=35),
-        'opcina'   :fields.char('Naziv opcine ili grada', size=35),
+        'opcina'   :fields.char('Naziv opcine ili grada', size=35, required="True"),
         'sustav_pdv':fields.boolean('U sustavu PDV-a'),
         'radno_vrijeme' : fields.char('Radno Vrijeme', required="True", size=128),
         'sljed_racuna':fields.selection ((('N','Na nivou naplatnog uredjaja'),('P','Na nivou poslovnog prostora')),'Sljed racuna'),
         'spec':fields.char('OIB Informaticke tvrtke', required="True", size=64),
         'res_certificate_id':fields.many2one('res.certificate','res_certificate_id','Certificate',help="Select certificate for this action to complete"),
-        #TODO: e sad bi ja jos ucitao podatke o certifikatu u neka function polja
-        
         'res_certificate_server_id':fields.many2one('res.certificate.server', 'res_certificate_server_id','Server',help="Server na koji se pokusavamo spojiti"),
         # e tu bi dodao subform komunikacija i učitao tablicu komunikacije
-        'log_ids':fields.one2many('l10n_hr_log','l10n_hr_fis_pprostor_id','Session')
+        #'log_ids':fields.one2many('l10n_hr_log','l10n_hr_fis_pprostor_id','Session')
                 }
     _defaults = {
                  'res_partner_id':'1',
@@ -87,26 +73,26 @@ class l10n_hr_fis_pprostor(osv.Model):
     ## ovo je samo test butonic, vrijednosti treba učitati iz tablica...
     ##################################################
     def button_test_echo(self,cr,uid,ids,fields,context=None):
-        logs_obj=self.pool.get('l10n.hr.log')
+        
         a = Fiskalizacija()
-        tstamp = datetime.datetime.now()
-        tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        start_time=a.time_formated()
+        
         odgovor = a.echo()
         
-        tstamp2=datetime.datetime.now()
-        vrijeme_obrade=tstamp2-tstamp
-        time_obr='%s.%s s'%(vrijeme_obrade.seconds, vrijeme_obrade.microseconds)
-        name=str(uuid.uuid4())
+        stop_time=a.time_formated()
+        t_obrada=stop_time['time_stamp']-start_time['time_stamp']
+        time_ob='%s.%s s'%(t_obrada.seconds, t_obrada.microseconds)
+        #name=str(uuid.uuid4())
                 
         values={
-                'name':name,
+                'name':str(uuid.uuid4()),
                 'type':'echo',
-                'sadrzaj':odgovor,
-                'timestamp':tstamp, 
-                'time_obr':time_obr
+                'sadrzaj':'TEST PORUKA - ECHO',
+                'timestamp':start_time['time_stamp'], 
+                'time_obr':time_ob,
+                'odgovor':odgovor
                 }
-        log_id=logs_obj.create(cr,uid,values,context=context)
-        return log_id
+        return self.pool.get('l10n.hr.log').create(cr,uid,values,context=context)
     
     
     
@@ -114,60 +100,81 @@ class l10n_hr_fis_pprostor(osv.Model):
         
     def button_test_prostor(self,cr,uid,id,fields,context=None):
         
-        polja_pprostor=['name','datum_primjene','oznaka_pp','radno_vrijeme',
-                        'ulica','kbr','kbr_dodatak','posta','naselje','opcina',
-                        'sustav_pdv','sljed_racuna','spec' ]
+        prostor=self.browse(cr,uid,id)[0]
         
-        prostor=self.pool.get('l10n_hr_fis_pprostor').read(cr,uid,id,polja_pprostor)[0]
+        fb = FiskalBase()
+        a = PrijavaProstora()
+        start_time=fb.CurrDateTime()
         
-        #### start data processing
-        start_time=vrijeme(self)
-        
-        #date_valid=
-        if not prostor['datum_primjene']:
+                
+        if not prostor.datum_primjene:
             ##ak nema datum unešen uzmi danas!
             datum_danas=start_time['datum']
-        else : datum_danas = prostor['datum_primjene']
-                  
-        a = PrijavaProstora()
+        else : datum_danas = prostor.datum_primjene
+        
         ##prvo punim zaglavlje
         a.t = start_time['datum']  # mislim da ovdje ide today ako je Zatvaranje !!!
         a.zaglavlje.DatumVrijeme = start_time['datum_vrijeme']
         a.zaglavlje.IdPoruke = str(uuid.uuid4())
         
+        poruka="Vrijeme generiranja: " + a.zaglavlje.DatumVrijeme + "\n"
+        poruka=poruka + "UUID : " + a.zaglavlje.IdPoruke + "\n"
+        
+        
         ## podaci o pos prostoru
-        a.pp = a.client2.factory.create('tns:PoslovniProstor') #ovog napravi ovako.. 
+        a.pp = a.client2.factory.create('tns:PoslovniProstor') 
         a.pp.Oib='57699704120'
-        a.pp.OznPoslProstora=prostor['oznaka_pp']
-        a.pp.RadnoVrijeme=prostor['radno_vrijeme']
-        a.pp.DatumPocetkaPrimjene='08.02.2013' #datum_danas   e ak ovo stavim baci gresku.. treba dodat raise ili nekaj!!!
-        a.pp.SpecNamj =prostor['spec']  #57699704120'
+        a.pp.OznPoslProstora=prostor.oznaka_pp
+        a.pp.RadnoVrijeme=prostor.radno_vrijeme
+        a.pp.DatumPocetkaPrimjene=datum_danas #'08.02.2013' #datum_danas   e ak ovo stavim baci gresku.. treba dodat raise ili nekaj!!!
+        a.pp.SpecNamj =prostor.spec  #57699704120'
+        
+        ### samo da si slozim kaj i kad saljem i to stram u bazu
+        poruka = poruka + "OIB : " + a.pp.Oib + "\n"
+        poruka=poruka + "Oznaka PP : " + a.pp.OznPoslProstora + ", Datum primjene : " + a.pp.DatumPocetkaPrimjene + "\n"
+        poruka=poruka + "Radno vrijeme : " + a.pp.RadnoVrijeme + "\n"
+        poruka = poruka + "OIB spec : " + a.pp.SpecNamj + "\n"
+        
         
         adresni_podatak = a.client2.factory.create('tns:AdresniPodatakType')
         adresa = a.client2.factory.create('tns:Adresa')
         
-        adresa.Ulica='Diogneševa' #prostor['ulica']  #'Diogneševa'
-        adresa.KucniBroj='8' # prostor['kbr']  #'8'
-        adresa.BrojPoste='10020' #prostor['posta']  #'10020'
-        adresa.Naselje='Botinec' #prostor['naselje']  #'Botinec'
-        adresa.Opcina='N.Zagreb' # prostor['opcina']  #'Novi Zagreb'
+        adresa.Ulica= prostor['ulica']  #'Diogneševa'
+        poruka= poruka + "Adresa : \n" + adresa.Ulica + " "
+        #adresa.KucniBroj=''
+        if prostor['kbr']:
+            adresa.KucniBroj=prostor['kbr']  #'8'
+            poruka= poruka + adresa.KucniBroj + " "
+        #adresa.KucniBrojDodatak=''
+        if prostor['kbr_dodatak']:
+            adresa.KucniBrojDodatak=prostor['kbr_dodatak']
+            poruka= poruka+ adresa.KucniBrojDodatak
+        poruka = poruka + "\n"
+        
+        adresa.BrojPoste=prostor['posta']  #'10020'
+        adresa.Naselje=prostor['naselje']  #'Botinec'
+        adresa.Opcina= prostor['opcina']  #'Novi Zagreb'
+        poruka= poruka + adresa.BrojPoste + " " + adresa.Naselje + ", "+ adresa.Opcina
         
         adresni_podatak.Adresa = adresa
         a.pp.AdresniPodatak = adresni_podatak
         a.pp.__delattr__('OznakaZatvaranja') ##hmhmmm i ovo treba paziti kak sa time! jer mora jednom imati i opciju zatvaranja!
         
-        odgovor = a.posalji()
+        odg = a.posalji()
         uuu=uuid.uuid4()
-        stop_time=vrijeme(self)
+        stop_time=fb.CurrDateTime()
+        
         t_obrada=stop_time['time_stamp']-start_time['time_stamp']
         time_ob='%s.%s s'%(t_obrada.seconds, t_obrada.microseconds)
         
         values={
                 'name':uuu,
                 'type':'prostor',
-                'sadrzaj':odgovor,
+                'sadrzaj':poruka,
                 'timestamp':stop_time['time_stamp'], 
-                'time_obr':time_ob
+                'time_obr':time_ob,
+                #'res_user_id':uid,
+                'odgovor': odg
                 }
         
         return self.pool.get('l10n.hr.log').create(cr,uid,values,context=context) #log_id
@@ -180,12 +187,12 @@ class l10n_hr_fis_pprostor(osv.Model):
         a = Fiskalizacija()
         tstamp = datetime.datetime.now()
         tmptime  = '%s.%s.%s %s:%s:%s' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
-        
-        
-        
         a.t = tstamp
-        a.zaglavlje.DatumVrijeme = '%d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
+        # podrazumijevam da su podaci obavezni i ne provjeravam jel postoje...
+        a.zaglavlje.DatumVrijeme = '%02d.%02d.%02dT%02d:%02d:%02d' % (tstamp.day, tstamp.month, tstamp.year, tstamp.hour, tstamp.minute, tstamp.second)
         a.zaglavlje.IdPoruke = str(uuid.uuid4())
+        
+        #main_comp=self.pool.get('res.company').browse()
         a.racun.Oib = "57699704120" #ucitaj ! OIB korisnika
         a.racun.USustPdv = 'true'  ## sustav_pdv
         a.racun.DatVrijeme = a.zaglavlje.DatumVrijeme 
@@ -206,12 +213,14 @@ class l10n_hr_fis_pprostor(osv.Model):
 
         a.izracunaj_zastitni_kod(tmptime)
         #odgovor_string = a.echo()  moze i ovo radi!
-        odgovor_string=a.posalji()
+        odgovor_string=a.posalji_racun()
         odgovor_array = odgovor_string[1]
         # ... sad tu ima odgovor.Jir
         
-        jir ='JIR - '+ odgovor_array.Jir
-        
+        if odgovor_array.Jir:
+            jir ='JIR - '+ odgovor_array.Jir
+        else :
+            jir='greska u komunikaciji'
         ##ovo sam dodao samo da vidim vrijeme odaziva...
         tstamp2=datetime.datetime.now()
         vrijeme_obrade=tstamp2-tstamp
@@ -224,15 +233,17 @@ class l10n_hr_fis_pprostor(osv.Model):
                 'type':'racun',
                 'sadrzaj':odgovor,
                 'timestamp':tstamp, 
-                'time_obr':time_obr
+                'time_obr':time_obr,
+                
                 }
         log_id=logs_obj.create(cr,uid,values,context=context)
         return log_id
-l10n_hr_fis_pprostor()
+l10n_hr_pprostor()
 
 class l10n_hr_log(osv.Model):
     _name='l10n.hr.log'
     _description='Official communicatins log'    
+    
     def _get_log_type(self,cursor,user_id, context=None):
         return (('prostor','Prijava Prostora'),
                 ('racun','Fiskalizacija racuna'),
@@ -243,12 +254,16 @@ class l10n_hr_log(osv.Model):
         'name': fields.char('Oznaka', size=128, help="Jedinstvena oznaka komunikacije "),
         'type': fields.selection (_get_log_type,'Log message Type'),
         'sadrzaj':fields.text('Message context'),
+        'odgovor':fields.text('Message reply'),
         'timestamp':fields.datetime('TimeStamp'),
         'time_obr':fields.char('Time for response',size=16,help='Vrijeme obrade podataka'), #vrijeme obrade prmljeno_vrijeme-poslano_vrijem
-        'l10n_hr_fis_pprostor_id':fields.many2one('l10n_hr_fis_pprostor','l10n_hr_fis_pprostor_log_id','Prostor'),
+        #'l10n_hr_fis_pprostor_id':fields.many2one('l10n_hr_fis_pprostor','l10n_hr_fis_pprostor_log_id','Prostor'),
+        'origin_id':fields.integer('Origin'), # id dokumenta sa kojeg dolazi.. za prostor i za racun, echo ne koristi.
         'res_users_id':fields.many2one('res.users','res_users_id','User') ## ovo cak i netreba obzirom na create i write uide !! 
         }
 l10n_hr_log()
+
+
 
 
 
