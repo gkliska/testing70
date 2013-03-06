@@ -99,9 +99,22 @@ class account_invoice(osv.Model):
         a.racun.USustPdv = pdv #'true'  ## sustav_pdv
         poslao = poslao + "U sustavu PDV : " + pdv + "\n" 
         ### TODO : zbrojiti sve pojedine poreze i grupirati i kaj ako nije u sustavu pdv?
+        
+        
+        poslao = poslao + "Stopa poreza : hardcode 25.00 \n" 
         a.porez.Stopa = "25.00" #"25.00"
-        a.porez.Osnovica = "100.00"
-        a.porez.Iznos = "25.00"
+        
+        osnovica=str(invoice.amount_untaxed)
+        if osnovica[-2]==".":
+            osnovica=osnovica+"0"
+        a.porez.Osnovica = osnovica #"100.00"
+        poslao = poslao + "Osnovica : " + osnovica + "\n" 
+        
+        porez=str(invoice.amount_tax)
+        if porez[-2]==".":
+            porez=porez + "0"
+        poslao = poslao + "Iznos poreza : " + porez + "\n" 
+        a.porez.Iznos = porez #"25.00"
         a.racun.Pdv.Porez.append(a.porez)
         
         iznos=str(invoice.amount_total) 
@@ -109,7 +122,7 @@ class account_invoice(osv.Model):
                             # npr 75,00 prikze kao 75.0 ! pa dodam samo jednu nulu da prodje :)
             iznos=iznos+'0'
         a.racun.IznosUkupno = iznos # "125.00" #
-        
+        poslao = poslao + "Iznos ukupno : " + iznos + "\n" 
         
         a.racun.NacinPlac = invoice.nac_plac
         poslao = poslao + "Način Plaćanja : " + invoice.nac_plac + "\n"
