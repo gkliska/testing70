@@ -1,0 +1,416 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* openerp_crypto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130314-DAJMI5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-15 22:13+0000\n"
+"PO-Revision-Date: 2013-03-16 00:06+0100\n"
+"Last-Translator: Davor Bojkić <bole@dajmi5.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_c:0
+#: field:crypto.generate_certificate_request,name_c:0
+msgid "Country (C)"
+msgstr "Country (C)"
+
+#. module: openerp_crypto
+#: selection:crypto.certificate,state:0
+#: selection:crypto.pairkey,state:0
+msgid "Confirmed"
+msgstr "Potvrđeno"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,date_begin:0
+msgid "Begin date"
+msgstr "Datum početka"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,crt:0
+msgid "Certificate"
+msgstr "Certifikat"
+
+#. module: openerp_crypto
+#: model:ir.model,name:openerp_crypto.model_crypto_generate_certificate
+msgid "crypto.generate_certificate"
+msgstr "crypto.generate_certificate"
+
+#. module: openerp_crypto
+#: field:crypto.pairkey,group_id:0
+msgid "User group"
+msgstr "Grupa korisnika"
+
+#. module: openerp_crypto
+#: help:crypto.certificate,crt:0
+msgid "Certificate in PEM format."
+msgstr "Certifikat u PEM formatu"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_l:0
+#: field:crypto.generate_certificate_request,name_l:0
+msgid "Locality Name (L)"
+msgstr "Locality Name (L)"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_email:0
+#: field:crypto.generate_certificate_request,name_email:0
+msgid "E-mail Addres (EMail)"
+msgstr "E-mail adresa "
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/certificate.py:202
+#, python-format
+msgid "Error in Key and Certificate strings !"
+msgstr "Greška u Ključu ili Certifikatu !"
+
+#. module: openerp_crypto
+#: view:crypto.generate_pairkey:0
+msgid "Generate Pairkeys"
+msgstr "Generiraj par ključeva"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_gn:0
+#: field:crypto.generate_certificate_request,name_gn:0
+msgid "Given Name (GN)"
+msgstr "Given Name (GN)"
+
+#. module: openerp_crypto
+#: selection:crypto.certificate,state:0
+#: selection:crypto.pairkey,state:0
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: openerp_crypto
+#: model:ir.model,name:openerp_crypto.model_crypto_pairkey
+msgid "crypto.pairkey"
+msgstr "crypto.pairkey"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_o:0
+#: field:crypto.generate_certificate_request,name_o:0
+msgid "Organization Name (O)"
+msgstr "Organization Name (O)"
+
+#. module: openerp_crypto
+#: model:ir.actions.act_window,name:openerp_crypto.action_certificate_tree
+#: model:ir.ui.menu,name:openerp_crypto.menu_action_certificate_tree
+msgid "Certificates"
+msgstr "Certifikati"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,date_end:0
+msgid "Expiration date"
+msgstr "Datum isteka"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,csr:0
+msgid "Request Certificate"
+msgstr "Certifikat zahtjev"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,status:0
+msgid "Status"
+msgstr "Status"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_serialnumber:0
+#: field:crypto.generate_certificate_request,name_serialnumber:0
+msgid "Serial Number (serialNumber)"
+msgstr "Serial Number (serialNumber)"
+
+#. module: openerp_crypto
+#: model:ir.model,name:openerp_crypto.model_crypto_generate_certificate_request
+msgid "crypto.generate_certificate_request"
+msgstr "crypto.generate_certificate_request"
+
+#. module: openerp_crypto
+#: model:ir.ui.menu,name:openerp_crypto.menu_crypto
+msgid "Cryptography"
+msgstr "Kriptografija"
+
+#. module: openerp_crypto
+#: help:crypto.pairkey,state:0
+msgid ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.            \n"
+"* The 'Confirmed' state is used when the key is completed with public or private key.            \n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+msgstr ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.            \n"
+"* The 'Confirmed' state is used when the key is completed with public or private key.            \n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,company_id:0
+#: field:crypto.generate_certificate_request,company_id:0
+msgid "Company"
+msgstr "Organizacija"
+
+#. module: openerp_crypto
+#: model:ir.model,name:openerp_crypto.model_crypto_generate_pairkey
+msgid "crypto.generate_pairkey"
+msgstr "crypto.generate_pairkey"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,serial_number:0
+msgid "Serial number"
+msgstr "Serijski broj"
+
+#. module: openerp_crypto
+#: help:crypto.pairkey,key:0
+msgid "Private key in PEM format."
+msgstr "Privatni ključ u PEM formatu."
+
+#. module: openerp_crypto
+#: model:ir.actions.act_window,name:openerp_crypto.action_pairkey_tree
+#: model:ir.ui.menu,name:openerp_crypto.menu_action_pairkey_tree
+msgid "Pairkeys"
+msgstr "Par ključeva"
+
+#. module: openerp_crypto
+#: selection:crypto.certificate,state:0
+msgid "Waiting"
+msgstr "Čekanje"
+
+#. module: openerp_crypto
+#: help:crypto.pairkey,group_id:0
+msgid "Users who use the pairkey."
+msgstr "Korisnici koji koriste par ključeva."
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/pairkey.py:77
+#, python-format
+msgid "Invalid action !"
+msgstr "Neispravna radnja"
+
+#. module: openerp_crypto
+#: help:crypto.certificate,state:0
+msgid ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.            \n"
+"* The 'Waiting' state is used when a request has send to Certificate Authority and is waiting for response.            \n"
+"* The 'Confirmed' state is used when a certificate is valid.            \n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+msgstr ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.            \n"
+"* The 'Waiting' state is used when a request has send to Certificate Authority and is waiting for response.            \n"
+"* The 'Confirmed' state is used when a certificate is valid.            \n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/certificate.py:207
+#, python-format
+msgid "This certificate is not ready to sign any message !"
+msgstr "Certifikat nije spreman za potpisivanje poruka!"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_sp:0
+#: field:crypto.generate_certificate_request,name_sp:0
+msgid "State or Province Name (ST/SP)"
+msgstr "State or Province Name (ST/SP)"
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate:0
+#: view:crypto.generate_certificate_request:0
+#: view:crypto.generate_pairkey:0
+msgid "Generate"
+msgstr "Generiraj"
+
+#. module: openerp_crypto
+#: help:crypto.pairkey,pub:0
+msgid "Public key in PEM format."
+msgstr "Javni ključ u PEM formatu"
+
+#. module: openerp_crypto
+#: model:ir.actions.act_window,name:openerp_crypto.action_generate_pairkey_wizard
+msgid "Generate Pairkey"
+msgstr "Generiraj par ključeva"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,pairkey_id:0
+msgid "Key pair"
+msgstr "Par ključeva"
+
+#. module: openerp_crypto
+#: field:crypto.generate_pairkey,update:0
+msgid "Update key"
+msgstr "Obnovi ključ"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,name:0
+#: field:crypto.pairkey,name:0
+msgid "Name"
+msgstr "Naziv"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_ou:0
+#: field:crypto.generate_certificate_request,name_ou:0
+msgid "Organization Unit Name (OU)"
+msgstr "Organization Unit Name (OU)"
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/certificate.py:207
+#, python-format
+msgid "Please set a certificate to continue. You must send your certification request to a authoritative certificator to get one, or execute a self sign certification"
+msgstr "Molimo odaberite certifikat  za nastavak. Morate poslati zahtjev za certifikatom ovlašenoj ustanovi, ili izvršiti samopotpisivanje certifikata"
+
+#. module: openerp_crypto
+#: field:crypto.pairkey,user_id:0
+msgid "Owner"
+msgstr "Vlasnik"
+
+#. module: openerp_crypto
+#: field:crypto.pairkey,key:0
+msgid "Private key"
+msgstr "Privatni ključ"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_cn:0
+#: field:crypto.generate_certificate_request,name_cn:0
+msgid "Common name (CN)"
+msgstr "Common name (CN)"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,name_sn:0
+#: field:crypto.generate_certificate_request,name_sn:0
+msgid "Surname (SN)"
+msgstr "Surname (SN)"
+
+#. module: openerp_crypto
+#: help:crypto.certificate,status:0
+msgid "Certificate Status"
+msgstr "Status certifikata"
+
+#. module: openerp_crypto
+#: selection:crypto.certificate,state:0
+#: selection:crypto.pairkey,state:0
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/pairkey.py:78
+#, python-format
+msgid "Cannot confirm invalid pairkeys. You need provide private and public keys in PEM format."
+msgstr "Nije moguće potvrditi neispravni par ključeva. Morate pribaviti privatni i javni ključ u PEM formatu."
+
+#. module: openerp_crypto
+#: view:crypto.pairkey:0
+msgid "Generate keys"
+msgstr "Generiraj ključeve"
+
+#. module: openerp_crypto
+#: view:crypto.certificate:0
+#: view:crypto.pairkey:0
+msgid "Approve"
+msgstr "Odobri"
+
+#. module: openerp_crypto
+#: model:res.groups,name:openerp_crypto.group_crypto_user
+msgid "Cryptography User"
+msgstr "Korisnik kriptografije"
+
+#. module: openerp_crypto
+#: model:res.groups,name:openerp_crypto.group_crypto_admin
+msgid "Cryptography Manager"
+msgstr "Voditelj kriptografije"
+
+#. module: openerp_crypto
+#: code:addons/openerp_crypto/certificate.py:202
+#, python-format
+msgid "Please check if private key and certificate are in ASCII PEM format."
+msgstr "Molimo provjerite leju li privatni i javni ključ u ASCII PEM formatu."
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate:0
+#: view:crypto.generate_certificate_request:0
+msgid "Update values when you change the Company"
+msgstr "Ažuriraj vrijednosti kada promjenite Organizaciju"
+
+#. module: openerp_crypto
+#: field:crypto.certificate,state:0
+#: field:crypto.pairkey,state:0
+msgid "State"
+msgstr "Stanje"
+
+#. module: openerp_crypto
+#: view:crypto.certificate:0
+#: view:crypto.pairkey:0
+msgid "Pair key"
+msgstr "Par ključ"
+
+#. module: openerp_crypto
+#: field:crypto.generate_certificate,version:0
+msgid "Version"
+msgstr "Verzija"
+
+#. module: openerp_crypto
+#: model:ir.model,name:openerp_crypto.model_crypto_certificate
+msgid "crypto.certificate"
+msgstr "crypto.certificate"
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate_request:0
+msgid "Owner X509 Fields Name"
+msgstr "Owner X509 Fields Name"
+
+#. module: openerp_crypto
+#: field:crypto.pairkey,pub:0
+msgid "Public key"
+msgstr "Javni ključ"
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate_request:0
+#: model:ir.actions.act_window,name:openerp_crypto.action_generate_certificate_request_wizard
+msgid "Generate Certificate Request"
+msgstr "Generate zahtjev za certifikat"
+
+#. module: openerp_crypto
+#: view:crypto.certificate:0
+msgid "Generate certifate"
+msgstr "Generiraj certifikat"
+
+#. module: openerp_crypto
+#: field:crypto.generate_pairkey,name:0
+msgid "Pair key name"
+msgstr "Kaziv par ključa"
+
+#. module: openerp_crypto
+#: view:crypto.certificate:0
+#: view:crypto.generate_certificate:0
+#: view:crypto.generate_certificate_request:0
+#: view:crypto.generate_pairkey:0
+#: view:crypto.pairkey:0
+msgid "Cancel"
+msgstr "Otkaži"
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate:0
+msgid "Issuer X509 Fields Name"
+msgstr "Issuer X509 Fields Name"
+
+#. module: openerp_crypto
+#: help:crypto.certificate,csr:0
+msgid "Certificate Request in PEM format."
+msgstr "Zahtjev za certifikatom u PEM formatu."
+
+#. module: openerp_crypto
+#: help:crypto.pairkey,user_id:0
+msgid "Owner of the key. The only who can view, import and export the key."
+msgstr "Vlasnik ključa. Jedini koji može vidjeti, uvesti ili izvesti ključ."
+
+#. module: openerp_crypto
+#: view:crypto.generate_certificate:0
+#: model:ir.actions.act_window,name:openerp_crypto.action_generate_certificate_wizard
+msgid "Generate Certificate"
+msgstr "Generiraj Certifikat"
+
+#. module: openerp_crypto
+#: field:crypto.generate_pairkey,key_length:0
+msgid "Key lenght"
+msgstr "Duljina ključa"
+
