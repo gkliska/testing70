@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_certificate_form_fiskal" model="ir.ui.view">
+			<field name="inherit_id" ref="openerp_crypto.view_certificate_form"/>
+			<field name="name">crypto.certificate.form.fiskal</field>
+			<field name="model">crypto.certificate</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="cert_type"/>
+					<field name="pfx_certificate"/>
+					<field name="company_id"/>
+					<field name="group_id"/>
+				</field>
+			</field>
+		</record>
+
+	</data>
+</openerp>

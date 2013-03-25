@@ -1,3 +1,0 @@
-openssl pkcs12 -in fiskal1.pfx -out c1.pem -nodes
-
-- rastavljanje sertifikata iz CLI

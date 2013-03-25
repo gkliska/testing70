@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_company_l10n_hr_data" model="ir.ui.view">
+            <field name="name">view.company.l10n.hr.data</field>
+            <field name="model">res.company</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+            	<notebook position="inside">
+	                <page string="Company data">
+				        <field name="porezna_uprava"/>
+				        <field name="porezna_ispostava"/>
+				        <field name="br_obveze_mirovinsko"/>
+				        <field name="br_obveze_zdravstveno"/>
+				        <field name="maticni_broj"/>	
+				        <field name="l10n_hr_base_nkd_id"/>				        		
+	                </page>
+                </notebook>
+            </field>
+        </record>   
+    </data>
+</openerp>
+

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<!-- Fiskal Prostor -->
+		<record id="fiskal_prostor_tree_view" model="ir.ui.view" >
+			<field name="name">fiskal_prostor_tree_view</field>
+			<field name="model">fiskal.prostor</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Poslovni prostor">
+					<field name="company_id" />
+					<field name="name" />
+					<field name="oznaka_prostor" />
+					<field name="ulica" />
+					<field name="kbr" />
+					<field name="posta" />
+					<field name="naselje" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="fiskal_prostor_form_view" model="ir.ui.view" >
+			<field name="name">fiskal_prostor_form_view</field>
+			<field name="model">fiskal.prostor</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Fiskalizacija">
+					<field name='name'/>
+					<field name='company_id'/>
+					<field name='oznaka_prostor'/>
+					<field name='datum_primjene' readonly="1"/>
+					<field name='sustav_pdv'/>
+					<newline/>
+					<group col="4" colspan="4">
+						<button name="button_test_echo" string="TEST ECHO" type="object" />
+						<button name="button_test_racun" string="TEST RACUN FIXDATA" type="object" />
+						<button name="button_test_prostor" string="PRIJAVA PROSTORA" type="object" />
+					</group>	
+
+					<newline/>
+
+					<notebook colspan="4">
+						<page string="Adresa">
+								<field name="ulica" />
+								<field name="kbr" />
+								<field name="kbr_dodatak"/>
+								<field name="posta"/>
+								<field name="naselje"/>
+								<field name="opcina"/>
+						</page>
+						<page string="Prijava">
+								<field name="sljed_racuna"/>
+								<newline/>
+								<field name="uredjaj_ids" colspan="4"/>
+								<field name="radno_vrijeme"/>
+								<field name="spec"/>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+
+		<record  id="fiskal_prostor_tree_view" model="ir.ui.view">
+			<field name="name">fiskal.prostor.tree.view</field>
+			<field name="model">fiskal.prostor</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+
+				<tree string="Fiskalizacija poslovnog prostora">
+					<field name="name" />
+					<field name="oznaka_prostor" />
+					<field name="ulica" />
+					<field name="kbr" />
+					<field name="posta" />
+					<field name="naselje" />
+				</tree>
+
+			</field>
+		</record>
+
+		<!--############################ ## ## ACTIONS ADD ## ############################## -->
+		<record model="ir.actions.act_window" id="fiskal_prostor_action">
+			<field name="name">fiskal_prostor_form</field>
+			<field name="res_model">fiskal.prostor</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<!--field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add new location.
+				</p>
+				<p>
+					In order to send invoice data to Tax office, you need to
+					enter
+					some data about your sale local10n.hr.pprostortion and rules of numbering..
+					blah
+					blah.. more text to comme,
+					as well as translations
+				</p>
+			</field-->
+
+		</record>
+
+
+		<menuitem id="menu_fiskal_root" name="Fiskalizacija" parent="base.menu_res_company_global" sequence="100" />
+		<menuitem id="menu_action_fiskal_prostor" name="Prijava Objekata" action="fiskal_prostor_action" parent="menu_fiskal_root" />
+
+
+		<!-- res.users OIB -->
+		<record id="view_users_form_fiskal_oib" model="ir.ui.view">
+			<field name="name">res.users.form_fiskal_oib</field>
+			<field name="model">res.users</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="base.view_users_form"/>
+			<field name="arch" type="xml">
+				<field name="active" position="after">
+					<field name="OIB"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- account.tax.code fiskla type & percent -->
+		<record id="account.view_tax_code_form_fiskal" model="ir.ui.view">
+			<field name="name">account.tax.code.form.fiskal</field>
+			<field name="model">account.tax.code</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_tax_code_form"/>
+			<field name="arch" type="xml">
+				<field name="company_id" position="after">
+					<field name="fiskal_type"/>
+					<field name="fiskal_percent"/>
+				</field>
+			</field>
+		</record>
+
+	
+		
+	</data>
+</openerp>

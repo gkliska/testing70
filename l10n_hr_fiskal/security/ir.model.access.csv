@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"l10n_hr_fiskal_prostor_full_access","l10n_hr_fiskal_prostor_full_access","model_fiskal_prostor","base.group_system","1","1","1","1"
+"l10n_hr_fiskal_prostor_user_access","l10n_hr_fiskal_prostor_user_access","model_fiskal_prostor","base.group_user","1","0","0","0"
+"l10n_hr_fiskal_uredjaj_full_access","l10n_hr_fiskal_uredjaj_full_access","model_fiskal_uredjaj","base.group_system","1","1","1","1"
+"l10n_hr_fiskal_uredjaj_user_access","l10n_hr_fiskal_uredjaj_user_access","model_fiskal_uredjaj","base.group_user","1","0","0","0"
